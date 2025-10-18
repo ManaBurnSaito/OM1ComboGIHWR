@@ -1,0 +1,1078 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>294</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>25.10</td>
+      <td>51.40</td>
+      <td>26.30</td>
+      <td>214</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>666</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>25.10</td>
+      <td>51.40</td>
+      <td>26.30</td>
+      <td>214</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>667</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>25.10</td>
+      <td>51.40</td>
+      <td>26.30</td>
+      <td>214</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>295</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>25.10</td>
+      <td>51.40</td>
+      <td>26.30</td>
+      <td>214</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32883</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.20</td>
+      <td>59.46</td>
+      <td>7.26</td>
+      <td>111</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34185</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.85</td>
+      <td>59.81</td>
+      <td>6.96</td>
+      <td>107</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5541</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.60</td>
+      <td>57.80</td>
+      <td>6.20</td>
+      <td>109</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97842" target="_blank" rel="noopener noreferrer"><img src="img/Vazin,_Two-Faced_Trickster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vazin, Two-Faced Trickster.html" target="_blank" rel="noopener noreferrer">Vazin, Two-Faced Trickster</a></td>
+      <td>3.74</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18003</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.20</td>
+      <td>57.86</td>
+      <td>5.66</td>
+      <td>159</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97915" target="_blank" rel="noopener noreferrer"><img src="img/Wisecrack.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wisecrack.html" target="_blank" rel="noopener noreferrer">Wisecrack</a></td>
+      <td>3.22</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26373</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.60</td>
+      <td>55.63</td>
+      <td>4.03</td>
+      <td>151</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97962" target="_blank" rel="noopener noreferrer"><img src="img/Crash,_Reckless_Endrider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crash, Reckless Endrider.html" target="_blank" rel="noopener noreferrer">Crash, Reckless Endrider</a></td>
+      <td>3.26</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25071</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>55.25</td>
+      <td>59.09</td>
+      <td>3.84</td>
+      <td>154</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97955" target="_blank" rel="noopener noreferrer"><img src="img/Tearle,_Entropic_Hunger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tearle, Entropic Hunger.html" target="_blank" rel="noopener noreferrer">Tearle, Entropic Hunger</a></td>
+      <td>2.64</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11493</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.70</td>
+      <td>55.37</td>
+      <td>3.67</td>
+      <td>121</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15771</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.10</td>
+      <td>56.62</td>
+      <td>3.52</td>
+      <td>136</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97903" target="_blank" rel="noopener noreferrer"><img src="img/Lavaborn_Goblins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lavaborn Goblins.html" target="_blank" rel="noopener noreferrer">Lavaborn Goblins</a></td>
+      <td>3.62</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5169</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.80</td>
+      <td>57.02</td>
+      <td>3.22</td>
+      <td>114</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9075</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.80</td>
+      <td>56.60</td>
+      <td>2.80</td>
+      <td>212</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16701</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.15</td>
+      <td>53.73</td>
+      <td>2.58</td>
+      <td>255</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97908" target="_blank" rel="noopener noreferrer"><img src="img/Sadistic_String-Puller.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sadistic String-Puller.html" target="_blank" rel="noopener noreferrer">Sadistic String-Puller</a></td>
+      <td>4.77</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33813</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.00</td>
+      <td>55.15</td>
+      <td>2.15</td>
+      <td>330</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12795</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.25</td>
+      <td>56.15</td>
+      <td>1.90</td>
+      <td>130</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12237</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.95</td>
+      <td>55.69</td>
+      <td>1.74</td>
+      <td>246</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15957</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.30</td>
+      <td>51.55</td>
+      <td>1.25</td>
+      <td>194</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97904" target="_blank" rel="noopener noreferrer"><img src="img/Romantic_Rendezvous.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Romantic Rendezvous.html" target="_blank" rel="noopener noreferrer">Romantic Rendezvous</a></td>
+      <td>5.46</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5913</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.75</td>
+      <td>53.81</td>
+      <td>1.06</td>
+      <td>197</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26187</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.55</td>
+      <td>51.45</td>
+      <td>0.90</td>
+      <td>173</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97961" target="_blank" rel="noopener noreferrer"><img src="img/Kivni,_Orb_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kivni, Orb Weaver.html" target="_blank" rel="noopener noreferrer">Kivni, Orb Weaver</a></td>
+      <td>3.70</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12609</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.40</td>
+      <td>53.79</td>
+      <td>0.39</td>
+      <td>132</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97884" target="_blank" rel="noopener noreferrer"><img src="img/Kroble,_Envoy_of_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kroble, Envoy of the Bog.html" target="_blank" rel="noopener noreferrer">Kroble, Envoy of the Bog</a></td>
+      <td>2.82</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15585</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.15</td>
+      <td>52.34</td>
+      <td>0.19</td>
+      <td>107</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97902" target="_blank" rel="noopener noreferrer"><img src="img/The_Infernus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Infernus.html" target="_blank" rel="noopener noreferrer">The Infernus</a></td>
+      <td>4.25</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27489</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.20</td>
+      <td>50.39</td>
+      <td>0.19</td>
+      <td>1288</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td>3.04</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15213</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>49.95</td>
+      <td>50.00</td>
+      <td>0.05</td>
+      <td>128</td>
+      <td>49.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97900" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Kitten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Kitten.html" target="_blank" rel="noopener noreferrer">Skittering Kitten</a></td>
+      <td>5.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25443</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.90</td>
+      <td>51.61</td>
+      <td>-0.29</td>
+      <td>310</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12981</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.80</td>
+      <td>52.33</td>
+      <td>-0.47</td>
+      <td>258</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9261</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.15</td>
+      <td>52.61</td>
+      <td>-0.54</td>
+      <td>230</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23769</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.55</td>
+      <td>50.00</td>
+      <td>-0.55</td>
+      <td>138</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97948" target="_blank" rel="noopener noreferrer"><img src="img/Nu_and_Sumi,_Career_Criminals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nu and Sumi, Career Criminals.html" target="_blank" rel="noopener noreferrer">Nu and Sumi, Career Criminals</a></td>
+      <td>3.65</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25257</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.00</td>
+      <td>53.33</td>
+      <td>-0.67</td>
+      <td>120</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97956" target="_blank" rel="noopener noreferrer"><img src="img/Carlo,_Suave_Schemer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Carlo, Suave Schemer.html" target="_blank" rel="noopener noreferrer">Carlo, Suave Schemer</a></td>
+      <td>3.05</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8703</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.25</td>
+      <td>51.37</td>
+      <td>-0.88</td>
+      <td>146</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13353</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.65</td>
+      <td>51.74</td>
+      <td>-0.91</td>
+      <td>172</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13725</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.30</td>
+      <td>53.26</td>
+      <td>-1.04</td>
+      <td>276</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16515</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>49.90</td>
+      <td>48.84</td>
+      <td>-1.06</td>
+      <td>129</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97907" target="_blank" rel="noopener noreferrer"><img src="img/Wardens_of_Silverweb_Summit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wardens of Silverweb Summit.html" target="_blank" rel="noopener noreferrer">Wardens of Silverweb Summit</a></td>
+      <td>5.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12051</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.60</td>
+      <td>50.50</td>
+      <td>-1.10</td>
+      <td>101</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97881" target="_blank" rel="noopener noreferrer"><img src="img/Scorvus_Ames,_Crimelord.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorvus Ames, Crimelord.html" target="_blank" rel="noopener noreferrer">Scorvus Ames, Crimelord</a></td>
+      <td>3.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24885</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.75</td>
+      <td>51.45</td>
+      <td>-1.30</td>
+      <td>276</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5355</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.95</td>
+      <td>51.33</td>
+      <td>-1.62</td>
+      <td>150</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8517</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.25</td>
+      <td>52.54</td>
+      <td>-1.71</td>
+      <td>118</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97860" target="_blank" rel="noopener noreferrer"><img src="img/Argyr,_Tidal_Spinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Argyr, Tidal Spinner.html" target="_blank" rel="noopener noreferrer">Argyr, Tidal Spinner</a></td>
+      <td>2.69</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33255</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.95</td>
+      <td>48.99</td>
+      <td>-1.96</td>
+      <td>296</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14469</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.40</td>
+      <td>49.40</td>
+      <td>-2.00</td>
+      <td>334</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97894" target="_blank" rel="noopener noreferrer"><img src="img/Deathflame_Burst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deathflame Burst.html" target="_blank" rel="noopener noreferrer">Deathflame Burst</a></td>
+      <td>3.44</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6285</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.15</td>
+      <td>52.07</td>
+      <td>-2.08</td>
+      <td>121</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
+      <td>2.81</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28977</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.70</td>
+      <td>49.09</td>
+      <td>-2.61</td>
+      <td>110</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td>3.62</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17631</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>51.95</td>
+      <td>49.25</td>
+      <td>-2.70</td>
+      <td>134</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97913" target="_blank" rel="noopener noreferrer"><img src="img/Restless_Razorkin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Restless Razorkin.html" target="_blank" rel="noopener noreferrer">Restless Razorkin</a></td>
+      <td>3.31</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13167</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.30</td>
+      <td>50.34</td>
+      <td>-2.96</td>
+      <td>145</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97887" target="_blank" rel="noopener noreferrer"><img src="img/Nill,_Vessel_of_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nill, Vessel of Valgavoth.html" target="_blank" rel="noopener noreferrer">Nill, Vessel of Valgavoth</a></td>
+      <td>2.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13539</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.00</td>
+      <td>50.00</td>
+      <td>-3.00</td>
+      <td>118</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
+      <td>4.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34557</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.85</td>
+      <td>49.67</td>
+      <td>-3.18</td>
+      <td>304</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31767</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.25</td>
+      <td>49.02</td>
+      <td>-3.23</td>
+      <td>102</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10935</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>53.35</td>
+      <td>50.00</td>
+      <td>-3.35</td>
+      <td>170</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27117</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>54.80</td>
+      <td>51.41</td>
+      <td>-3.39</td>
+      <td>142</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10191</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.25</td>
+      <td>48.78</td>
+      <td>-3.47</td>
+      <td>205</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6099</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>52.45</td>
+      <td>47.62</td>
+      <td>-4.83</td>
+      <td>105</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97845" target="_blank" rel="noopener noreferrer"><img src="img/Obscura_Alleylurkers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obscura Alleylurkers.html" target="_blank" rel="noopener noreferrer">Obscura Alleylurkers</a></td>
+      <td>5.28</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14097</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.40</td>
+      <td>43.86</td>
+      <td>-6.54</td>
+      <td>114</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97892" target="_blank" rel="noopener noreferrer"><img src="img/Galvanized_Workforce.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanized Workforce.html" target="_blank" rel="noopener noreferrer">Galvanized Workforce</a></td>
+      <td>5.27</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17445</th>
+      <td>rare</td>
+      <td>UR</td>
+      <td>3.04</td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>50.2</td>
+      <td>50.50</td>
+      <td>40.37</td>
+      <td>-10.13</td>
+      <td>109</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97912" target="_blank" rel="noopener noreferrer"><img src="img/Kephon,_Rage_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kephon, Rage Incubator.html" target="_blank" rel="noopener noreferrer">Kephon, Rage Incubator</a></td>
+      <td>5.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

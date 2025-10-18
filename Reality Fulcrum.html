@@ -1,0 +1,793 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17646</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.15</td>
+      <td>64.71</td>
+      <td>10.56</td>
+      <td>102</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97913" target="_blank" rel="noopener noreferrer"><img src="img/Restless_Razorkin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Restless Razorkin.html" target="_blank" rel="noopener noreferrer">Restless Razorkin</a></td>
+      <td>3.31</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3510</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.30</td>
+      <td>63.93</td>
+      <td>8.63</td>
+      <td>122</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32712</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.00</td>
+      <td>62.62</td>
+      <td>8.62</td>
+      <td>107</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12996</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.00</td>
+      <td>63.06</td>
+      <td>8.06</td>
+      <td>111</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4440</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.95</td>
+      <td>63.95</td>
+      <td>7.00</td>
+      <td>172</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27132</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>57.00</td>
+      <td>62.80</td>
+      <td>5.80</td>
+      <td>207</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1464</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.50</td>
+      <td>61.90</td>
+      <td>5.40</td>
+      <td>126</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10950</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.55</td>
+      <td>60.61</td>
+      <td>5.06</td>
+      <td>132</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21180</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.65</td>
+      <td>60.65</td>
+      <td>5.00</td>
+      <td>155</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18948</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.30</td>
+      <td>59.87</td>
+      <td>4.57</td>
+      <td>157</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8718</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.45</td>
+      <td>58.56</td>
+      <td>4.11</td>
+      <td>111</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5184</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.00</td>
+      <td>59.63</td>
+      <td>3.63</td>
+      <td>109</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5370</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.15</td>
+      <td>58.33</td>
+      <td>3.18</td>
+      <td>120</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20064</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.55</td>
+      <td>59.59</td>
+      <td>3.04</td>
+      <td>146</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2766</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.95</td>
+      <td>57.97</td>
+      <td>3.02</td>
+      <td>138</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33642</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>53.60</td>
+      <td>56.60</td>
+      <td>3.00</td>
+      <td>106</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98001" target="_blank" rel="noopener noreferrer"><img src="img/Savage_Mansion.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Savage Mansion.html" target="_blank" rel="noopener noreferrer">Savage Mansion</a></td>
+      <td>4.65</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20994</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.25</td>
+      <td>59.01</td>
+      <td>2.76</td>
+      <td>161</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19692</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.25</td>
+      <td>56.86</td>
+      <td>2.61</td>
+      <td>102</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3324</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>57.75</td>
+      <td>60.25</td>
+      <td>2.50</td>
+      <td>161</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9276</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.35</td>
+      <td>57.76</td>
+      <td>2.41</td>
+      <td>161</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23598</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.55</td>
+      <td>58.79</td>
+      <td>2.24</td>
+      <td>165</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30294</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.60</td>
+      <td>56.63</td>
+      <td>2.03</td>
+      <td>1162</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td>3.75</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>19134</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.65</td>
+      <td>56.56</td>
+      <td>1.91</td>
+      <td>122</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97921" target="_blank" rel="noopener noreferrer"><img src="img/Cruel_Caracals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cruel Caracals.html" target="_blank" rel="noopener noreferrer">Cruel Caracals</a></td>
+      <td>4.68</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13740</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.50</td>
+      <td>58.20</td>
+      <td>1.70</td>
+      <td>189</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12252</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.15</td>
+      <td>57.58</td>
+      <td>1.43</td>
+      <td>165</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7602</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.90</td>
+      <td>57.55</td>
+      <td>0.65</td>
+      <td>106</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
+      <td>4.64</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34572</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.05</td>
+      <td>55.27</td>
+      <td>0.22</td>
+      <td>237</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10206</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.45</td>
+      <td>53.91</td>
+      <td>-0.54</td>
+      <td>115</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13368</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.85</td>
+      <td>52.73</td>
+      <td>-2.12</td>
+      <td>110</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25458</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.10</td>
+      <td>51.59</td>
+      <td>-2.51</td>
+      <td>126</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1836</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.40</td>
+      <td>53.85</td>
+      <td>-2.55</td>
+      <td>130</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9090</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>56.00</td>
+      <td>53.08</td>
+      <td>-2.92</td>
+      <td>130</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26760</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.65</td>
+      <td>52.29</td>
+      <td>-3.36</td>
+      <td>109</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34200</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.05</td>
+      <td>51.46</td>
+      <td>-3.59</td>
+      <td>103</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31782</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.45</td>
+      <td>50.00</td>
+      <td>-4.45</td>
+      <td>120</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33828</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>55.20</td>
+      <td>50.44</td>
+      <td>-4.76</td>
+      <td>113</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5928</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.95</td>
+      <td>50.00</td>
+      <td>-4.95</td>
+      <td>112</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24900</th>
+      <td>rare</td>
+      <td></td>
+      <td>3.75</td>
+      <td><a href=".//Reality Fulcrum.html" target="_blank" rel="noopener noreferrer">Reality Fulcrum</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97983" target="_blank" rel="noopener noreferrer"><img src="img/Reality_Fulcrum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>54.6</td>
+      <td>54.95</td>
+      <td>48.91</td>
+      <td>-6.04</td>
+      <td>137</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

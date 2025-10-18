@@ -1,0 +1,1211 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7976</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.00</td>
+      <td>65.05</td>
+      <td>11.05</td>
+      <td>103</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97857" target="_blank" rel="noopener noreferrer"><img src="img/Robotics_Mastery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Robotics Mastery.html" target="_blank" rel="noopener noreferrer">Robotics Mastery</a></td>
+      <td>3.31</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13370</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.45</td>
+      <td>61.47</td>
+      <td>9.02</td>
+      <td>109</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21926</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>55.55</td>
+      <td>64.42</td>
+      <td>8.87</td>
+      <td>104</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97938" target="_blank" rel="noopener noreferrer"><img src="img/Terrific_Team-Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terrific Team-Up.html" target="_blank" rel="noopener noreferrer">Terrific Team-Up</a></td>
+      <td>2.12</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3698</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.85</td>
+      <td>62.04</td>
+      <td>7.19</td>
+      <td>108</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12254</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.75</td>
+      <td>60.13</td>
+      <td>6.38</td>
+      <td>153</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30482</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.70</td>
+      <td>58.54</td>
+      <td>4.84</td>
+      <td>123</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97984" target="_blank" rel="noopener noreferrer"><img src="img/Fizik,_Etherium_Mechanic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fizik, Etherium Mechanic.html" target="_blank" rel="noopener noreferrer">Fizik, Etherium Mechanic</a></td>
+      <td>1.49</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20996</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.85</td>
+      <td>58.20</td>
+      <td>4.35</td>
+      <td>189</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32528</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>50.10</td>
+      <td>53.52</td>
+      <td>3.42</td>
+      <td>142</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97995" target="_blank" rel="noopener noreferrer"><img src="img/Temple_Trap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temple Trap.html" target="_blank" rel="noopener noreferrer">Temple Trap</a></td>
+      <td>5.67</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4070</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.45</td>
+      <td>57.63</td>
+      <td>3.18</td>
+      <td>118</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13556</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.80</td>
+      <td>55.66</td>
+      <td>2.86</td>
+      <td>106</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
+      <td>4.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18950</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.90</td>
+      <td>55.56</td>
+      <td>2.66</td>
+      <td>198</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13742</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.10</td>
+      <td>56.63</td>
+      <td>2.53</td>
+      <td>166</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33830</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.80</td>
+      <td>54.97</td>
+      <td>2.17</td>
+      <td>151</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29924</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.50</td>
+      <td>54.63</td>
+      <td>2.13</td>
+      <td>108</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97981" target="_blank" rel="noopener noreferrer"><img src="img/Eerie_Gravestone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eerie Gravestone.html" target="_blank" rel="noopener noreferrer">Eerie Gravestone</a></td>
+      <td>5.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25460</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.70</td>
+      <td>53.70</td>
+      <td>2.00</td>
+      <td>108</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31040</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.35</td>
+      <td>54.29</td>
+      <td>1.94</td>
+      <td>280</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97987" target="_blank" rel="noopener noreferrer"><img src="img/Opulent_Valet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Opulent Valet.html" target="_blank" rel="noopener noreferrer">Opulent Valet</a></td>
+      <td>5.47</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34016</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.95</td>
+      <td>54.19</td>
+      <td>1.24</td>
+      <td>179</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27134</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.60</td>
+      <td>55.83</td>
+      <td>1.23</td>
+      <td>206</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6116</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.25</td>
+      <td>53.21</td>
+      <td>0.96</td>
+      <td>109</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97845" target="_blank" rel="noopener noreferrer"><img src="img/Obscura_Alleylurkers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obscura Alleylurkers.html" target="_blank" rel="noopener noreferrer">Obscura Alleylurkers</a></td>
+      <td>5.28</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4814</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.50</td>
+      <td>52.26</td>
+      <td>0.76</td>
+      <td>155</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97838" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Aces.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Aces.html" target="_blank" rel="noopener noreferrer">Freestrider Aces</a></td>
+      <td>4.77</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30854</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.15</td>
+      <td>52.68</td>
+      <td>0.53</td>
+      <td>224</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97986" target="_blank" rel="noopener noreferrer"><img src="img/Data_Scrubber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Data Scrubber.html" target="_blank" rel="noopener noreferrer">Data Scrubber</a></td>
+      <td>5.59</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19694</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.85</td>
+      <td>52.34</td>
+      <td>0.49</td>
+      <td>128</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4442</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.55</td>
+      <td>54.90</td>
+      <td>0.35</td>
+      <td>306</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30668</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>49.80</td>
+      <td>50.09</td>
+      <td>0.29</td>
+      <td>1591</td>
+      <td>49.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td>5.50</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9092</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.60</td>
+      <td>53.85</td>
+      <td>0.25</td>
+      <td>195</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20624</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.00</td>
+      <td>52.99</td>
+      <td>-0.01</td>
+      <td>117</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97931" target="_blank" rel="noopener noreferrer"><img src="img/Scout_the_City.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scout the City.html" target="_blank" rel="noopener noreferrer">Scout the City</a></td>
+      <td>5.21</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9278</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.95</td>
+      <td>52.83</td>
+      <td>-0.12</td>
+      <td>212</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8534</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.05</td>
+      <td>53.91</td>
+      <td>-0.14</td>
+      <td>115</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97860" target="_blank" rel="noopener noreferrer"><img src="img/Argyr,_Tidal_Spinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Argyr, Tidal Spinner.html" target="_blank" rel="noopener noreferrer">Argyr, Tidal Spinner</a></td>
+      <td>2.69</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3326</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>55.35</td>
+      <td>55.17</td>
+      <td>-0.18</td>
+      <td>232</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1652</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.05</td>
+      <td>52.71</td>
+      <td>-0.34</td>
+      <td>129</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97819" target="_blank" rel="noopener noreferrer"><img src="img/Costume_Closet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Costume Closet.html" target="_blank" rel="noopener noreferrer">Costume Closet</a></td>
+      <td>3.13</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32714</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.60</td>
+      <td>51.23</td>
+      <td>-0.37</td>
+      <td>162</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23600</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.15</td>
+      <td>53.78</td>
+      <td>-0.37</td>
+      <td>225</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3884</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.25</td>
+      <td>50.83</td>
+      <td>-0.42</td>
+      <td>120</td>
+      <td>52.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97833" target="_blank" rel="noopener noreferrer"><img src="img/Eztli_of_the_Thousand_Moons.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eztli of the Thousand Moons.html" target="_blank" rel="noopener noreferrer">Eztli of the Thousand Moons</a></td>
+      <td>5.47</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24902</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.55</td>
+      <td>52.00</td>
+      <td>-0.55</td>
+      <td>150</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2768</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.55</td>
+      <td>51.91</td>
+      <td>-0.64</td>
+      <td>183</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26948</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.75</td>
+      <td>52.85</td>
+      <td>-0.90</td>
+      <td>123</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
+      <td>2.47</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32156</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.05</td>
+      <td>52.00</td>
+      <td>-1.05</td>
+      <td>175</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97993" target="_blank" rel="noopener noreferrer"><img src="img/Goro_Rel,_Scourge_to_Spiders.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Goro Rel, Scourge to Spiders.html" target="_blank" rel="noopener noreferrer">Goro Rel, Scourge to Spiders</a></td>
+      <td>3.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1466</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.10</td>
+      <td>52.81</td>
+      <td>-1.29</td>
+      <td>231</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12998</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.60</td>
+      <td>51.28</td>
+      <td>-1.32</td>
+      <td>117</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30110</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>49.60</td>
+      <td>47.77</td>
+      <td>-1.83</td>
+      <td>157</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5372</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.75</td>
+      <td>50.64</td>
+      <td>-2.11</td>
+      <td>156</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1838</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.00</td>
+      <td>51.87</td>
+      <td>-2.13</td>
+      <td>187</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8720</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.05</td>
+      <td>49.71</td>
+      <td>-2.34</td>
+      <td>173</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29552</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.20</td>
+      <td>49.75</td>
+      <td>-2.45</td>
+      <td>203</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6302</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.95</td>
+      <td>51.49</td>
+      <td>-2.46</td>
+      <td>101</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
+      <td>2.81</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3512</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.90</td>
+      <td>50.26</td>
+      <td>-2.64</td>
+      <td>189</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34202</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.65</td>
+      <td>50.00</td>
+      <td>-2.65</td>
+      <td>168</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10952</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.15</td>
+      <td>50.00</td>
+      <td>-3.15</td>
+      <td>122</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18578</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.45</td>
+      <td>50.00</td>
+      <td>-3.45</td>
+      <td>108</td>
+      <td>57.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97918" target="_blank" rel="noopener noreferrer"><img src="img/Grow_Extra_Arms.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grow Extra Arms.html" target="_blank" rel="noopener noreferrer">Grow Extra Arms</a></td>
+      <td>4.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26762</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.25</td>
+      <td>49.79</td>
+      <td>-3.46</td>
+      <td>235</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20066</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.15</td>
+      <td>50.51</td>
+      <td>-3.64</td>
+      <td>196</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10208</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.05</td>
+      <td>48.39</td>
+      <td>-3.66</td>
+      <td>124</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19136</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.25</td>
+      <td>48.57</td>
+      <td>-3.68</td>
+      <td>140</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97921" target="_blank" rel="noopener noreferrer"><img src="img/Cruel_Caracals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cruel Caracals.html" target="_blank" rel="noopener noreferrer">Cruel Caracals</a></td>
+      <td>4.68</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34574</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.65</td>
+      <td>48.96</td>
+      <td>-3.69</td>
+      <td>288</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5186</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.60</td>
+      <td>49.67</td>
+      <td>-3.93</td>
+      <td>151</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18764</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>51.05</td>
+      <td>45.89</td>
+      <td>-5.16</td>
+      <td>146</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21182</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>53.25</td>
+      <td>47.90</td>
+      <td>-5.35</td>
+      <td>167</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31784</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.05</td>
+      <td>46.43</td>
+      <td>-5.62</td>
+      <td>224</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7604</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>54.50</td>
+      <td>48.59</td>
+      <td>-5.91</td>
+      <td>142</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
+      <td>4.64</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5930</th>
+      <td>uncommon</td>
+      <td></td>
+      <td>5.5</td>
+      <td><a href=".//Error-9, Viral Node.html" target="_blank" rel="noopener noreferrer">Error-9, Viral Node</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97985" target="_blank" rel="noopener noreferrer"><img src="img/Error-9,_Viral_Node.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>49.8</td>
+      <td>52.55</td>
+      <td>43.31</td>
+      <td>-9.24</td>
+      <td>157</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

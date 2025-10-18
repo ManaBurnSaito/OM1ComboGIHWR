@@ -1,0 +1,1648 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>23284</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>60.20</td>
+      <td>70.91</td>
+      <td>10.71</td>
+      <td>110</td>
+      <td>63.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97946" target="_blank" rel="noopener noreferrer"><img src="img/Neach,_Pinnacle_Pariah.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Neach, Pinnacle Pariah.html" target="_blank" rel="noopener noreferrer">Neach, Pinnacle Pariah</a></td>
+      <td>1.49</td>
+      <td>UB</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>28120</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.80</td>
+      <td>68.46</td>
+      <td>10.66</td>
+      <td>298</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97972" target="_blank" rel="noopener noreferrer"><img src="img/Cirina_Bargainspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cirina Bargainspinner.html" target="_blank" rel="noopener noreferrer">Cirina Bargainspinner</a></td>
+      <td>2.64</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>2824</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.50</td>
+      <td>67.68</td>
+      <td>10.18</td>
+      <td>164</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97828" target="_blank" rel="noopener noreferrer"><img src="img/Generous_Betty_Wray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Generous Betty Wray.html" target="_blank" rel="noopener noreferrer">Generous Betty Wray</a></td>
+      <td>2.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12682</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.45</td>
+      <td>67.48</td>
+      <td>10.03</td>
+      <td>286</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28306</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.10</td>
+      <td>65.14</td>
+      <td>9.04</td>
+      <td>109</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97973" target="_blank" rel="noopener noreferrer"><img src="img/Kavaero,_Mind-Bitten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kavaero, Mind-Bitten.html" target="_blank" rel="noopener noreferrer">Kavaero, Mind-Bitten</a></td>
+      <td>2.03</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7474</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.90</td>
+      <td>66.78</td>
+      <td>8.88</td>
+      <td>596</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
+      <td>4.64</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22540</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.90</td>
+      <td>66.42</td>
+      <td>8.52</td>
+      <td>134</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97942" target="_blank" rel="noopener noreferrer"><img src="img/Angler's_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angler's Shield.html" target="_blank" rel="noopener noreferrer">Angler's Shield</a></td>
+      <td>1.73</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>13240</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.85</td>
+      <td>64.24</td>
+      <td>8.39</td>
+      <td>344</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18634</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.45</td>
+      <td>61.82</td>
+      <td>7.37</td>
+      <td>110</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26818</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.15</td>
+      <td>64.40</td>
+      <td>7.25</td>
+      <td>323</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
+      <td>2.47</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29050</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.80</td>
+      <td>63.89</td>
+      <td>7.09</td>
+      <td>108</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97977" target="_blank" rel="noopener noreferrer"><img src="img/Diligent_Webkeepers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Diligent Webkeepers.html" target="_blank" rel="noopener noreferrer">Diligent Webkeepers</a></td>
+      <td>2.20</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26632</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.65</td>
+      <td>63.70</td>
+      <td>7.05</td>
+      <td>540</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1894</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.30</td>
+      <td>64.29</td>
+      <td>6.99</td>
+      <td>182</td>
+      <td>58.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97821" target="_blank" rel="noopener noreferrer"><img src="img/Basil,_Cabaretti_Loudmouth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Basil, Cabaretti Loudmouth.html" target="_blank" rel="noopener noreferrer">Basil, Cabaretti Loudmouth</a></td>
+      <td>3.14</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7288</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.20</td>
+      <td>65.07</td>
+      <td>6.87</td>
+      <td>146</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97852" target="_blank" rel="noopener noreferrer"><img src="img/The_Watcher_on_the_Road.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Watcher on the Road.html" target="_blank" rel="noopener noreferrer">The Watcher on the Road</a></td>
+      <td>1.67</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>2638</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.95</td>
+      <td>62.81</td>
+      <td>6.86</td>
+      <td>363</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11566</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.35</td>
+      <td>61.11</td>
+      <td>6.76</td>
+      <td>108</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97879" target="_blank" rel="noopener noreferrer"><img src="img/Clandestine_Work.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Clandestine Work.html" target="_blank" rel="noopener noreferrer">Clandestine Work</a></td>
+      <td>5.63</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8404</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.45</td>
+      <td>64.16</td>
+      <td>6.71</td>
+      <td>466</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97860" target="_blank" rel="noopener noreferrer"><img src="img/Argyr,_Tidal_Spinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Argyr, Tidal Spinner.html" target="_blank" rel="noopener noreferrer">Argyr, Tidal Spinner</a></td>
+      <td>2.69</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5986</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.65</td>
+      <td>62.22</td>
+      <td>6.57</td>
+      <td>397</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97845" target="_blank" rel="noopener noreferrer"><img src="img/Obscura_Alleylurkers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obscura Alleylurkers.html" target="_blank" rel="noopener noreferrer">Obscura Alleylurkers</a></td>
+      <td>5.28</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19936</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.55</td>
+      <td>63.64</td>
+      <td>6.09</td>
+      <td>154</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20866</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.25</td>
+      <td>62.94</td>
+      <td>5.69</td>
+      <td>143</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1150</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.30</td>
+      <td>62.61</td>
+      <td>5.31</td>
+      <td>115</td>
+      <td>58.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97817" target="_blank" rel="noopener noreferrer"><img src="img/Zora,_Spider_Fancier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zora, Spider Fancier.html" target="_blank" rel="noopener noreferrer">Zora, Spider Fancier</a></td>
+      <td>2.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8962</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.00</td>
+      <td>62.24</td>
+      <td>5.24</td>
+      <td>670</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5800</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.95</td>
+      <td>61.15</td>
+      <td>5.20</td>
+      <td>556</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25144</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.20</td>
+      <td>62.40</td>
+      <td>5.20</td>
+      <td>367</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97956" target="_blank" rel="noopener noreferrer"><img src="img/Carlo,_Suave_Schemer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Carlo, Suave Schemer.html" target="_blank" rel="noopener noreferrer">Carlo, Suave Schemer</a></td>
+      <td>3.05</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11938</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.80</td>
+      <td>59.89</td>
+      <td>5.09</td>
+      <td>182</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97881" target="_blank" rel="noopener noreferrer"><img src="img/Scorvus_Ames,_Crimelord.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorvus Ames, Crimelord.html" target="_blank" rel="noopener noreferrer">Scorvus Ames, Crimelord</a></td>
+      <td>3.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29980</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>53.00</td>
+      <td>58.06</td>
+      <td>5.06</td>
+      <td>124</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8590</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.45</td>
+      <td>60.41</td>
+      <td>4.96</td>
+      <td>591</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5056</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.00</td>
+      <td>61.87</td>
+      <td>4.87</td>
+      <td>493</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33700</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.20</td>
+      <td>61.02</td>
+      <td>4.82</td>
+      <td>608</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4684</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.90</td>
+      <td>59.46</td>
+      <td>4.56</td>
+      <td>148</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97838" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Aces.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Aces.html" target="_blank" rel="noopener noreferrer">Freestrider Aces</a></td>
+      <td>4.77</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1708</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.40</td>
+      <td>61.78</td>
+      <td>4.38</td>
+      <td>382</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29236</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.95</td>
+      <td>59.17</td>
+      <td>4.22</td>
+      <td>240</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97978" target="_blank" rel="noopener noreferrer"><img src="img/Margot,_On_the_Case.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Margot, On the Case.html" target="_blank" rel="noopener noreferrer">Margot, On the Case</a></td>
+      <td>3.37</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5614</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.60</td>
+      <td>60.74</td>
+      <td>4.14</td>
+      <td>135</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97843" target="_blank" rel="noopener noreferrer"><img src="img/Lost_in_Littjara.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lost in Littjara.html" target="_blank" rel="noopener noreferrer">Lost in Littjara</a></td>
+      <td>1.95</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>11008</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>61.95</td>
+      <td>66.00</td>
+      <td>4.05</td>
+      <td>100</td>
+      <td>67.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97876" target="_blank" rel="noopener noreferrer"><img src="img/Luis,_Pompous_Pillager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Luis, Pompous Pillager.html" target="_blank" rel="noopener noreferrer">Luis, Pompous Pillager</a></td>
+      <td>1.40</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32026</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.45</td>
+      <td>60.43</td>
+      <td>3.98</td>
+      <td>235</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97993" target="_blank" rel="noopener noreferrer"><img src="img/Goro_Rel,_Scourge_to_Spiders.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Goro Rel, Scourge to Spiders.html" target="_blank" rel="noopener noreferrer">Goro Rel, Scourge to Spiders</a></td>
+      <td>3.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5242</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.15</td>
+      <td>60.10</td>
+      <td>3.95</td>
+      <td>619</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32770</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.40</td>
+      <td>59.24</td>
+      <td>3.84</td>
+      <td>184</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13798</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>59.35</td>
+      <td>63.11</td>
+      <td>3.76</td>
+      <td>122</td>
+      <td>62.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97891" target="_blank" rel="noopener noreferrer"><img src="img/Villainous_Wrath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Villainous Wrath.html" target="_blank" rel="noopener noreferrer">Villainous Wrath</a></td>
+      <td>1.54</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34444</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.05</td>
+      <td>59.81</td>
+      <td>3.76</td>
+      <td>530</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29422</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.60</td>
+      <td>59.31</td>
+      <td>3.71</td>
+      <td>231</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34072</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.05</td>
+      <td>59.45</td>
+      <td>3.40</td>
+      <td>513</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1336</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.50</td>
+      <td>60.69</td>
+      <td>3.19</td>
+      <td>318</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11380</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.90</td>
+      <td>58.06</td>
+      <td>3.16</td>
+      <td>155</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13054</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.50</td>
+      <td>59.62</td>
+      <td>3.12</td>
+      <td>260</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97887" target="_blank" rel="noopener noreferrer"><img src="img/Nill,_Vessel_of_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nill, Vessel of Valgavoth.html" target="_blank" rel="noopener noreferrer">Nill, Vessel of Valgavoth</a></td>
+      <td>2.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3196</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.75</td>
+      <td>61.87</td>
+      <td>3.12</td>
+      <td>396</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30910</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.75</td>
+      <td>58.71</td>
+      <td>2.96</td>
+      <td>155</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97987" target="_blank" rel="noopener noreferrer"><img src="img/Opulent_Valet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Opulent Valet.html" target="_blank" rel="noopener noreferrer">Opulent Valet</a></td>
+      <td>5.47</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4312</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.95</td>
+      <td>60.88</td>
+      <td>2.93</td>
+      <td>432</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28864</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.90</td>
+      <td>57.82</td>
+      <td>2.92</td>
+      <td>211</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td>3.62</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5428</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.80</td>
+      <td>57.71</td>
+      <td>2.91</td>
+      <td>253</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97842" target="_blank" rel="noopener noreferrer"><img src="img/Vazin,_Two-Faced_Trickster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vazin, Two-Faced Trickster.html" target="_blank" rel="noopener noreferrer">Vazin, Two-Faced Trickster</a></td>
+      <td>3.74</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12868</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.00</td>
+      <td>58.82</td>
+      <td>2.82</td>
+      <td>374</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30724</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.55</td>
+      <td>58.25</td>
+      <td>2.70</td>
+      <td>206</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97986" target="_blank" rel="noopener noreferrer"><img src="img/Data_Scrubber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Data Scrubber.html" target="_blank" rel="noopener noreferrer">Data Scrubber</a></td>
+      <td>5.59</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24772</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.95</td>
+      <td>58.62</td>
+      <td>2.67</td>
+      <td>650</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18820</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.30</td>
+      <td>58.88</td>
+      <td>2.58</td>
+      <td>107</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23470</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.55</td>
+      <td>60.09</td>
+      <td>2.54</td>
+      <td>223</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3382</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.30</td>
+      <td>58.80</td>
+      <td>2.50</td>
+      <td>250</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1522</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.45</td>
+      <td>58.82</td>
+      <td>2.37</td>
+      <td>170</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97819" target="_blank" rel="noopener noreferrer"><img src="img/Costume_Closet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Costume Closet.html" target="_blank" rel="noopener noreferrer">Costume Closet</a></td>
+      <td>3.13</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29794</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.90</td>
+      <td>58.10</td>
+      <td>2.20</td>
+      <td>210</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97981" target="_blank" rel="noopener noreferrer"><img src="img/Eerie_Gravestone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eerie Gravestone.html" target="_blank" rel="noopener noreferrer">Eerie Gravestone</a></td>
+      <td>5.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12124</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.15</td>
+      <td>59.35</td>
+      <td>2.20</td>
+      <td>492</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9148</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.35</td>
+      <td>58.46</td>
+      <td>2.11</td>
+      <td>792</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8032</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.60</td>
+      <td>58.51</td>
+      <td>1.91</td>
+      <td>335</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97858" target="_blank" rel="noopener noreferrer"><img src="img/Outsmart_the_Amateur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outsmart the Amateur.html" target="_blank" rel="noopener noreferrer">Outsmart the Amateur</a></td>
+      <td>3.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27748</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>59.10</td>
+      <td>60.98</td>
+      <td>1.88</td>
+      <td>123</td>
+      <td>61.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97970" target="_blank" rel="noopener noreferrer"><img src="img/Makdee_and_Itla,_Skysnarers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Makdee and Itla, Skysnarers.html" target="_blank" rel="noopener noreferrer">Makdee and Itla, Skysnarers</a></td>
+      <td>1.35</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3568</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.25</td>
+      <td>59.90</td>
+      <td>1.65</td>
+      <td>207</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10822</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.55</td>
+      <td>58.06</td>
+      <td>1.51</td>
+      <td>434</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33142</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.15</td>
+      <td>55.63</td>
+      <td>1.48</td>
+      <td>142</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6172</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.35</td>
+      <td>58.70</td>
+      <td>1.35</td>
+      <td>414</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
+      <td>2.81</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6358</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.60</td>
+      <td>57.74</td>
+      <td>1.14</td>
+      <td>2875</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td>2.65</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12496</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.60</td>
+      <td>57.62</td>
+      <td>1.02</td>
+      <td>210</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97884" target="_blank" rel="noopener noreferrer"><img src="img/Kroble,_Envoy_of_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kroble, Envoy of the Bog.html" target="_blank" rel="noopener noreferrer">Kroble, Envoy of the Bog</a></td>
+      <td>2.82</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10078</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.45</td>
+      <td>56.42</td>
+      <td>0.97</td>
+      <td>452</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28492</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.10</td>
+      <td>58.99</td>
+      <td>0.89</td>
+      <td>139</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97974" target="_blank" rel="noopener noreferrer"><img src="img/Skv'x_the_Augmenter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skv'x the Augmenter.html" target="_blank" rel="noopener noreferrer">Skv'x the Augmenter</a></td>
+      <td>1.41</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>13612</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.50</td>
+      <td>58.36</td>
+      <td>0.86</td>
+      <td>538</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24958</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.45</td>
+      <td>59.17</td>
+      <td>0.72</td>
+      <td>360</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97955" target="_blank" rel="noopener noreferrer"><img src="img/Tearle,_Entropic_Hunger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tearle, Entropic Hunger.html" target="_blank" rel="noopener noreferrer">Tearle, Entropic Hunger</a></td>
+      <td>2.64</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13426</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.20</td>
+      <td>56.79</td>
+      <td>0.59</td>
+      <td>361</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
+      <td>4.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27004</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>58.00</td>
+      <td>58.39</td>
+      <td>0.39</td>
+      <td>149</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3940</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.85</td>
+      <td>58.14</td>
+      <td>0.29</td>
+      <td>172</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25330</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.10</td>
+      <td>55.06</td>
+      <td>-0.04</td>
+      <td>267</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8218</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>54.75</td>
+      <td>53.29</td>
+      <td>-1.46</td>
+      <td>167</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97859" target="_blank" rel="noopener noreferrer"><img src="img/Secret_Identity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Secret Identity.html" target="_blank" rel="noopener noreferrer">Secret Identity</a></td>
+      <td>4.77</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7846</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>57.40</td>
+      <td>55.89</td>
+      <td>-1.51</td>
+      <td>331</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97857" target="_blank" rel="noopener noreferrer"><img src="img/Robotics_Mastery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Robotics Mastery.html" target="_blank" rel="noopener noreferrer">Robotics Mastery</a></td>
+      <td>3.31</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4126</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.55</td>
+      <td>54.10</td>
+      <td>-2.45</td>
+      <td>122</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97835" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Leap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Leap.html" target="_blank" rel="noopener noreferrer">Lively Leap</a></td>
+      <td>5.17</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31654</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>55.45</td>
+      <td>52.99</td>
+      <td>-2.46</td>
+      <td>234</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33886</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>56.35</td>
+      <td>53.61</td>
+      <td>-2.74</td>
+      <td>166</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7102</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>52.55</td>
+      <td>47.83</td>
+      <td>-4.72</td>
+      <td>115</td>
+      <td>48.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97851" target="_blank" rel="noopener noreferrer"><img src="img/Olx,_Mouth_to_Many_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Olx, Mouth to Many Eyes.html" target="_blank" rel="noopener noreferrer">Olx, Mouth to Many Eyes</a></td>
+      <td>4.95</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7660</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>52.30</td>
+      <td>46.67</td>
+      <td>-5.63</td>
+      <td>105</td>
+      <td>48.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97856" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Research_Team.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Research Team.html" target="_blank" rel="noopener noreferrer">Pinnacle Research Team</a></td>
+      <td>6.11</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10636</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>2.65</td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>56.6</td>
+      <td>53.85</td>
+      <td>47.86</td>
+      <td>-5.99</td>
+      <td>117</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97874" target="_blank" rel="noopener noreferrer"><img src="img/Caldaia_Brawlers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caldaia Brawlers.html" target="_blank" rel="noopener noreferrer">Caldaia Brawlers</a></td>
+      <td>5.55</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,736 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>32674</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>58.15</td>
+      <td>68.94</td>
+      <td>10.79</td>
+      <td>264</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32860</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>58.55</td>
+      <td>69.29</td>
+      <td>10.74</td>
+      <td>127</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31744</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>58.60</td>
+      <td>68.46</td>
+      <td>9.86</td>
+      <td>260</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19840</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.10</td>
+      <td>69.03</td>
+      <td>8.93</td>
+      <td>113</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97927" target="_blank" rel="noopener noreferrer"><img src="img/Ancestral_Carvings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ancestral Carvings.html" target="_blank" rel="noopener noreferrer">Ancestral Carvings</a></td>
+      <td>4.13</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18724</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>57.60</td>
+      <td>66.26</td>
+      <td>8.66</td>
+      <td>246</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1798</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.55</td>
+      <td>68.70</td>
+      <td>8.15</td>
+      <td>115</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27094</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>61.15</td>
+      <td>69.00</td>
+      <td>7.85</td>
+      <td>300</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26908</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.30</td>
+      <td>68.00</td>
+      <td>7.70</td>
+      <td>100</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
+      <td>2.47</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34534</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.20</td>
+      <td>66.76</td>
+      <td>7.56</td>
+      <td>346</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33976</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.50</td>
+      <td>67.01</td>
+      <td>7.51</td>
+      <td>294</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30070</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>56.15</td>
+      <td>63.64</td>
+      <td>7.49</td>
+      <td>242</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20956</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.40</td>
+      <td>67.85</td>
+      <td>7.45</td>
+      <td>311</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33790</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.35</td>
+      <td>66.51</td>
+      <td>7.16</td>
+      <td>212</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20584</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.55</td>
+      <td>66.67</td>
+      <td>7.12</td>
+      <td>141</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97931" target="_blank" rel="noopener noreferrer"><img src="img/Scout_the_City.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scout the City.html" target="_blank" rel="noopener noreferrer">Scout the City</a></td>
+      <td>5.21</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19654</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>58.40</td>
+      <td>65.44</td>
+      <td>7.04</td>
+      <td>136</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33604</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>57.75</td>
+      <td>64.66</td>
+      <td>6.91</td>
+      <td>283</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98001" target="_blank" rel="noopener noreferrer"><img src="img/Savage_Mansion.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Savage Mansion.html" target="_blank" rel="noopener noreferrer">Savage Mansion</a></td>
+      <td>4.65</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23560</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.70</td>
+      <td>67.45</td>
+      <td>6.75</td>
+      <td>212</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21328</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.90</td>
+      <td>67.59</td>
+      <td>6.69</td>
+      <td>108</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97935" target="_blank" rel="noopener noreferrer"><img src="img/The_Clutter_Cluster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Clutter Cluster.html" target="_blank" rel="noopener noreferrer">The Clutter Cluster</a></td>
+      <td>2.10</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33232</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>57.30</td>
+      <td>63.80</td>
+      <td>6.50</td>
+      <td>221</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21700</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.50</td>
+      <td>65.65</td>
+      <td>6.15</td>
+      <td>131</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97937" target="_blank" rel="noopener noreferrer"><img src="img/Supportive_Parents.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Supportive Parents.html" target="_blank" rel="noopener noreferrer">Supportive Parents</a></td>
+      <td>3.07</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20026</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.70</td>
+      <td>65.54</td>
+      <td>4.84</td>
+      <td>267</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18910</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.45</td>
+      <td>64.06</td>
+      <td>4.61</td>
+      <td>192</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12214</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.30</td>
+      <td>64.17</td>
+      <td>3.87</td>
+      <td>120</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18166</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>61.45</td>
+      <td>65.22</td>
+      <td>3.77</td>
+      <td>115</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97916" target="_blank" rel="noopener noreferrer"><img src="img/Selesnya_Archivist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Selesnya Archivist.html" target="_blank" rel="noopener noreferrer">Selesnya Archivist</a></td>
+      <td>2.32</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3286</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>61.90</td>
+      <td>64.73</td>
+      <td>2.83</td>
+      <td>207</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34162</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.20</td>
+      <td>61.84</td>
+      <td>2.64</td>
+      <td>228</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3472</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.45</td>
+      <td>61.95</td>
+      <td>2.50</td>
+      <td>113</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27280</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>61.95</td>
+      <td>64.22</td>
+      <td>2.27</td>
+      <td>109</td>
+      <td>61.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97967" target="_blank" rel="noopener noreferrer"><img src="img/Janai_and_Hoppy,_Roofskippers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Janai and Hoppy, Roofskippers.html" target="_blank" rel="noopener noreferrer">Janai and Hoppy, Roofskippers</a></td>
+      <td>2.29</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21886</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>62.10</td>
+      <td>63.72</td>
+      <td>1.62</td>
+      <td>113</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97938" target="_blank" rel="noopener noreferrer"><img src="img/Terrific_Team-Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terrific Team-Up.html" target="_blank" rel="noopener noreferrer">Terrific Team-Up</a></td>
+      <td>2.12</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1426</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.65</td>
+      <td>61.95</td>
+      <td>1.30</td>
+      <td>113</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4402</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>61.10</td>
+      <td>61.99</td>
+      <td>0.89</td>
+      <td>171</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21142</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>59.80</td>
+      <td>60.23</td>
+      <td>0.43</td>
+      <td>176</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23188</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>62.90</td>
+      <td>63.09</td>
+      <td>0.19</td>
+      <td>1165</td>
+      <td>62.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td>2.46</td>
+      <td>WUBRG</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>13702</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>60.65</td>
+      <td>59.85</td>
+      <td>-0.80</td>
+      <td>132</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19096</th>
+      <td>mythic</td>
+      <td>WUBRG</td>
+      <td>2.46</td>
+      <td><a href=".//Scions of the Ur-Spider.html" target="_blank" rel="noopener noreferrer">Scions of the Ur-Spider</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97945" target="_blank" rel="noopener noreferrer"><img src="img/Scions_of_the_Ur-Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>62.9</td>
+      <td>58.80</td>
+      <td>57.78</td>
+      <td>-1.02</td>
+      <td>135</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97921" target="_blank" rel="noopener noreferrer"><img src="img/Cruel_Caracals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cruel Caracals.html" target="_blank" rel="noopener noreferrer">Cruel Caracals</a></td>
+      <td>4.68</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,565 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1142</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.15</td>
+      <td>56.73</td>
+      <td>4.58</td>
+      <td>104</td>
+      <td>58.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97817" target="_blank" rel="noopener noreferrer"><img src="img/Zora,_Spider_Fancier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zora, Spider Fancier.html" target="_blank" rel="noopener noreferrer">Zora, Spider Fancier</a></td>
+      <td>2.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28112</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.65</td>
+      <td>57.03</td>
+      <td>4.38</td>
+      <td>128</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97972" target="_blank" rel="noopener noreferrer"><img src="img/Cirina_Bargainspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cirina Bargainspinner.html" target="_blank" rel="noopener noreferrer">Cirina Bargainspinner</a></td>
+      <td>2.64</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>26624</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>51.50</td>
+      <td>55.24</td>
+      <td>3.74</td>
+      <td>248</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3932</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.70</td>
+      <td>54.10</td>
+      <td>1.40</td>
+      <td>122</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19928</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.40</td>
+      <td>53.00</td>
+      <td>0.60</td>
+      <td>100</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20858</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.10</td>
+      <td>52.34</td>
+      <td>0.24</td>
+      <td>128</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4862</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>46.30</td>
+      <td>46.53</td>
+      <td>0.23</td>
+      <td>922</td>
+      <td>46.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td>3.52</td>
+      <td>W</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>29414</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>50.45</td>
+      <td>49.19</td>
+      <td>-1.26</td>
+      <td>185</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2630</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>50.80</td>
+      <td>49.07</td>
+      <td>-1.73</td>
+      <td>216</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1328</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.35</td>
+      <td>50.41</td>
+      <td>-1.94</td>
+      <td>244</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18626</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>49.30</td>
+      <td>47.32</td>
+      <td>-1.98</td>
+      <td>112</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26810</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.00</td>
+      <td>50.00</td>
+      <td>-2.00</td>
+      <td>108</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
+      <td>2.47</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>4676</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>49.75</td>
+      <td>47.24</td>
+      <td>-2.51</td>
+      <td>163</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97838" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Aces.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Aces.html" target="_blank" rel="noopener noreferrer">Freestrider Aces</a></td>
+      <td>4.77</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3560</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>53.10</td>
+      <td>50.49</td>
+      <td>-2.61</td>
+      <td>103</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3188</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>53.60</td>
+      <td>50.22</td>
+      <td>-3.38</td>
+      <td>227</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3374</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>51.15</td>
+      <td>46.73</td>
+      <td>-4.42</td>
+      <td>199</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34064</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>50.90</td>
+      <td>45.83</td>
+      <td>-5.07</td>
+      <td>144</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29228</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>49.80</td>
+      <td>44.23</td>
+      <td>-5.57</td>
+      <td>104</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97978" target="_blank" rel="noopener noreferrer"><img src="img/Margot,_On_the_Case.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Margot, On the Case.html" target="_blank" rel="noopener noreferrer">Margot, On the Case</a></td>
+      <td>3.37</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34436</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>50.90</td>
+      <td>45.10</td>
+      <td>-5.80</td>
+      <td>153</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9140</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>51.20</td>
+      <td>44.14</td>
+      <td>-7.06</td>
+      <td>111</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4304</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.80</td>
+      <td>45.59</td>
+      <td>-7.21</td>
+      <td>261</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2816</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.35</td>
+      <td>44.72</td>
+      <td>-7.63</td>
+      <td>123</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97828" target="_blank" rel="noopener noreferrer"><img src="img/Generous_Betty_Wray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Generous Betty Wray.html" target="_blank" rel="noopener noreferrer">Generous Betty Wray</a></td>
+      <td>2.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23462</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.40</td>
+      <td>44.50</td>
+      <td>-7.90</td>
+      <td>200</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1700</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>52.25</td>
+      <td>44.20</td>
+      <td>-8.05</td>
+      <td>224</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4118</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>51.40</td>
+      <td>43.24</td>
+      <td>-8.16</td>
+      <td>111</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97835" target="_blank" rel="noopener noreferrer"><img src="img/Lively_Leap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lively Leap.html" target="_blank" rel="noopener noreferrer">Lively Leap</a></td>
+      <td>5.17</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33878</th>
+      <td>rare</td>
+      <td>W</td>
+      <td>3.52</td>
+      <td><a href=".//Chosen by Valgavoth.html" target="_blank" rel="noopener noreferrer">Chosen by Valgavoth</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97839" target="_blank" rel="noopener noreferrer"><img src="img/Chosen_by_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>46.3</td>
+      <td>51.20</td>
+      <td>40.74</td>
+      <td>-10.46</td>
+      <td>135</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

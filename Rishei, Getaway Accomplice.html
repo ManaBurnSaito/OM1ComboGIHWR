@@ -1,0 +1,2465 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>310</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>26.60</td>
+      <td>50.86</td>
+      <td>24.26</td>
+      <td>348</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>311</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>26.60</td>
+      <td>50.86</td>
+      <td>24.26</td>
+      <td>348</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>682</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>26.60</td>
+      <td>50.86</td>
+      <td>24.26</td>
+      <td>348</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>683</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>26.60</td>
+      <td>50.86</td>
+      <td>24.26</td>
+      <td>348</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9827</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.85</td>
+      <td>72.88</td>
+      <td>17.03</td>
+      <td>177</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97867" target="_blank" rel="noopener noreferrer"><img src="img/Hex_of_Undeath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hex of Undeath.html" target="_blank" rel="noopener noreferrer">Hex of Undeath</a></td>
+      <td>1.64</td>
+      <td>B</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>23405</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>58.50</td>
+      <td>68.65</td>
+      <td>10.15</td>
+      <td>303</td>
+      <td>63.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97946" target="_blank" rel="noopener noreferrer"><img src="img/Neach,_Pinnacle_Pariah.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Neach, Pinnacle Pariah.html" target="_blank" rel="noopener noreferrer">Neach, Pinnacle Pariah</a></td>
+      <td>1.49</td>
+      <td>UB</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>11129</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>60.25</td>
+      <td>68.77</td>
+      <td>8.52</td>
+      <td>365</td>
+      <td>67.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97876" target="_blank" rel="noopener noreferrer"><img src="img/Luis,_Pompous_Pillager.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Luis, Pompous Pillager.html" target="_blank" rel="noopener noreferrer">Luis, Pompous Pillager</a></td>
+      <td>1.40</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6851</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>49.75</td>
+      <td>58.12</td>
+      <td>8.37</td>
+      <td>117</td>
+      <td>46.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97849" target="_blank" rel="noopener noreferrer"><img src="img/Impostor_Syndrome.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Impostor Syndrome.html" target="_blank" rel="noopener noreferrer">Impostor Syndrome</a></td>
+      <td>2.46</td>
+      <td>U</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>5735</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>63.10</td>
+      <td>8.20</td>
+      <td>336</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97843" target="_blank" rel="noopener noreferrer"><img src="img/Lost_in_Littjara.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lost in Littjara.html" target="_blank" rel="noopener noreferrer">Lost in Littjara</a></td>
+      <td>1.95</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>10013</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.90</td>
+      <td>65.38</td>
+      <td>7.48</td>
+      <td>390</td>
+      <td>62.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97868" target="_blank" rel="noopener noreferrer"><img src="img/Wrench,_Speedway_Saboteur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrench, Speedway Saboteur.html" target="_blank" rel="noopener noreferrer">Wrench, Speedway Saboteur</a></td>
+      <td>1.46</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>13919</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.65</td>
+      <td>64.55</td>
+      <td>6.90</td>
+      <td>426</td>
+      <td>62.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97891" target="_blank" rel="noopener noreferrer"><img src="img/Villainous_Wrath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Villainous Wrath.html" target="_blank" rel="noopener noreferrer">Villainous Wrath</a></td>
+      <td>1.54</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>33449</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.85</td>
+      <td>59.56</td>
+      <td>6.71</td>
+      <td>272</td>
+      <td>52.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98000" target="_blank" rel="noopener noreferrer"><img src="img/Exclusive_Nightclub.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Exclusive Nightclub.html" target="_blank" rel="noopener noreferrer">Exclusive Nightclub</a></td>
+      <td>2.55</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>6665</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.65</td>
+      <td>59.30</td>
+      <td>6.65</td>
+      <td>172</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td>3.36</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>5177</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.30</td>
+      <td>61.69</td>
+      <td>6.39</td>
+      <td>1185</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7595</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.20</td>
+      <td>62.44</td>
+      <td>6.24</td>
+      <td>1451</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
+      <td>4.64</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30101</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.30</td>
+      <td>57.14</td>
+      <td>5.84</td>
+      <td>294</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12803</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.75</td>
+      <td>61.54</td>
+      <td>5.79</td>
+      <td>1040</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34379</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.45</td>
+      <td>59.00</td>
+      <td>5.55</td>
+      <td>100</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98005" target="_blank" rel="noopener noreferrer"><img src="img/Urban_Retreat.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Urban Retreat.html" target="_blank" rel="noopener noreferrer">Urban Retreat</a></td>
+      <td>2.47</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>33077</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.40</td>
+      <td>58.89</td>
+      <td>5.49</td>
+      <td>180</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97998" target="_blank" rel="noopener noreferrer"><img src="img/Multiversal_Passage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Multiversal Passage.html" target="_blank" rel="noopener noreferrer">Multiversal Passage</a></td>
+      <td>2.00</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31589</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.10</td>
+      <td>59.52</td>
+      <td>5.42</td>
+      <td>168</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97990" target="_blank" rel="noopener noreferrer"><img src="img/Stitcher's_Wings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Stitcher's Wings.html" target="_blank" rel="noopener noreferrer">Stitcher's Wings</a></td>
+      <td>1.53</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12431</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.60</td>
+      <td>58.95</td>
+      <td>5.35</td>
+      <td>190</td>
+      <td>54.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97883" target="_blank" rel="noopener noreferrer"><img src="img/The_Terminus_of_Return.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Terminus of Return.html" target="_blank" rel="noopener noreferrer">The Terminus of Return</a></td>
+      <td>1.49</td>
+      <td>B</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>25265</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.50</td>
+      <td>60.71</td>
+      <td>5.21</td>
+      <td>1209</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97956" target="_blank" rel="noopener noreferrer"><img src="img/Carlo,_Suave_Schemer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Carlo, Suave Schemer.html" target="_blank" rel="noopener noreferrer">Carlo, Suave Schemer</a></td>
+      <td>3.05</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24707</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>58.25</td>
+      <td>63.31</td>
+      <td>5.06</td>
+      <td>139</td>
+      <td>63.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97953" target="_blank" rel="noopener noreferrer"><img src="img/Withar,_Cocoon_Keeper.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Withar, Cocoon Keeper.html" target="_blank" rel="noopener noreferrer">Withar, Cocoon Keeper</a></td>
+      <td>1.68</td>
+      <td>WB</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>32891</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>58.66</td>
+      <td>4.96</td>
+      <td>433</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10199</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>58.64</td>
+      <td>4.89</td>
+      <td>1731</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10571</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.10</td>
+      <td>59.88</td>
+      <td>4.78</td>
+      <td>167</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97873" target="_blank" rel="noopener noreferrer"><img src="img/Egrix_the_Bile_Bulwark.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Egrix the Bile Bulwark.html" target="_blank" rel="noopener noreferrer">Egrix the Bile Bulwark</a></td>
+      <td>1.32</td>
+      <td>B</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>12617</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>59.66</td>
+      <td>4.76</td>
+      <td>714</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97884" target="_blank" rel="noopener noreferrer"><img src="img/Kroble,_Envoy_of_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kroble, Envoy of the Bog.html" target="_blank" rel="noopener noreferrer">Kroble, Envoy of the Bog</a></td>
+      <td>2.82</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>30845</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.85</td>
+      <td>58.56</td>
+      <td>4.71</td>
+      <td>444</td>
+      <td>54.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97986" target="_blank" rel="noopener noreferrer"><img src="img/Data_Scrubber.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Data Scrubber.html" target="_blank" rel="noopener noreferrer">Data Scrubber</a></td>
+      <td>5.59</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13547</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>58.53</td>
+      <td>4.03</td>
+      <td>1343</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
+      <td>4.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32519</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.80</td>
+      <td>55.71</td>
+      <td>3.91</td>
+      <td>140</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97995" target="_blank" rel="noopener noreferrer"><img src="img/Temple_Trap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temple Trap.html" target="_blank" rel="noopener noreferrer">Temple Trap</a></td>
+      <td>5.67</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6293</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.65</td>
+      <td>59.49</td>
+      <td>3.84</td>
+      <td>980</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
+      <td>2.81</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5549</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.10</td>
+      <td>56.85</td>
+      <td>3.75</td>
+      <td>635</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97842" target="_blank" rel="noopener noreferrer"><img src="img/Vazin,_Two-Faced_Trickster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vazin, Two-Faced Trickster.html" target="_blank" rel="noopener noreferrer">Vazin, Two-Faced Trickster</a></td>
+      <td>3.74</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13733</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>59.33</td>
+      <td>3.53</td>
+      <td>2230</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7967</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>59.22</td>
+      <td>3.52</td>
+      <td>645</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97857" target="_blank" rel="noopener noreferrer"><img src="img/Robotics_Mastery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Robotics Mastery.html" target="_blank" rel="noopener noreferrer">Robotics Mastery</a></td>
+      <td>3.31</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31775</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>57.08</td>
+      <td>3.33</td>
+      <td>452</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8711</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.75</td>
+      <td>57.04</td>
+      <td>3.29</td>
+      <td>1313</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12245</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.45</td>
+      <td>58.71</td>
+      <td>3.26</td>
+      <td>2095</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10943</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.85</td>
+      <td>58.10</td>
+      <td>3.25</td>
+      <td>1964</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25079</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.75</td>
+      <td>59.98</td>
+      <td>3.23</td>
+      <td>1067</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97955" target="_blank" rel="noopener noreferrer"><img src="img/Tearle,_Entropic_Hunger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tearle, Entropic Hunger.html" target="_blank" rel="noopener noreferrer">Tearle, Entropic Hunger</a></td>
+      <td>2.64</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15221</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.45</td>
+      <td>54.63</td>
+      <td>3.18</td>
+      <td>216</td>
+      <td>49.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97900" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Kitten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Kitten.html" target="_blank" rel="noopener noreferrer">Skittering Kitten</a></td>
+      <td>5.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11687</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.65</td>
+      <td>55.80</td>
+      <td>3.15</td>
+      <td>690</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97879" target="_blank" rel="noopener noreferrer"><img src="img/Clandestine_Work.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Clandestine Work.html" target="_blank" rel="noopener noreferrer">Clandestine Work</a></td>
+      <td>5.63</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13175</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.80</td>
+      <td>57.85</td>
+      <td>3.05</td>
+      <td>1025</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97887" target="_blank" rel="noopener noreferrer"><img src="img/Nill,_Vessel_of_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nill, Vessel of Valgavoth.html" target="_blank" rel="noopener noreferrer">Nill, Vessel of Valgavoth</a></td>
+      <td>2.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6107</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.95</td>
+      <td>56.97</td>
+      <td>3.02</td>
+      <td>1048</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97845" target="_blank" rel="noopener noreferrer"><img src="img/Obscura_Alleylurkers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Obscura Alleylurkers.html" target="_blank" rel="noopener noreferrer">Obscura Alleylurkers</a></td>
+      <td>5.28</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13361</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.15</td>
+      <td>57.09</td>
+      <td>2.94</td>
+      <td>1552</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>6479</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>57.82</td>
+      <td>2.92</td>
+      <td>211</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97847" target="_blank" rel="noopener noreferrer"><img src="img/Spectral_Restitching.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectral Restitching.html" target="_blank" rel="noopener noreferrer">Spectral Restitching</a></td>
+      <td>2.65</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>9269</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.65</td>
+      <td>57.55</td>
+      <td>2.90</td>
+      <td>1774</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12059</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.10</td>
+      <td>55.90</td>
+      <td>2.80</td>
+      <td>771</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97881" target="_blank" rel="noopener noreferrer"><img src="img/Scorvus_Ames,_Crimelord.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorvus Ames, Crimelord.html" target="_blank" rel="noopener noreferrer">Scorvus Ames, Crimelord</a></td>
+      <td>3.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5363</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.45</td>
+      <td>57.20</td>
+      <td>2.75</td>
+      <td>1486</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29915</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.20</td>
+      <td>56.95</td>
+      <td>2.75</td>
+      <td>676</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97981" target="_blank" rel="noopener noreferrer"><img src="img/Eerie_Gravestone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eerie Gravestone.html" target="_blank" rel="noopener noreferrer">Eerie Gravestone</a></td>
+      <td>5.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28427</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.40</td>
+      <td>57.14</td>
+      <td>2.74</td>
+      <td>371</td>
+      <td>55.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97973" target="_blank" rel="noopener noreferrer"><img src="img/Kavaero,_Mind-Bitten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kavaero, Mind-Bitten.html" target="_blank" rel="noopener noreferrer">Kavaero, Mind-Bitten</a></td>
+      <td>2.03</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18011</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.70</td>
+      <td>56.25</td>
+      <td>2.55</td>
+      <td>304</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97915" target="_blank" rel="noopener noreferrer"><img src="img/Wisecrack.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wisecrack.html" target="_blank" rel="noopener noreferrer">Wisecrack</a></td>
+      <td>3.22</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16523</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.40</td>
+      <td>53.95</td>
+      <td>2.55</td>
+      <td>228</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97907" target="_blank" rel="noopener noreferrer"><img src="img/Wardens_of_Silverweb_Summit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wardens of Silverweb Summit.html" target="_blank" rel="noopener noreferrer">Wardens of Silverweb Summit</a></td>
+      <td>5.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20057</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.85</td>
+      <td>58.38</td>
+      <td>2.53</td>
+      <td>173</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5921</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>56.75</td>
+      <td>2.50</td>
+      <td>1644</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32147</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>57.12</td>
+      <td>2.37</td>
+      <td>660</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97993" target="_blank" rel="noopener noreferrer"><img src="img/Goro_Rel,_Scourge_to_Spiders.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Goro Rel, Scourge to Spiders.html" target="_blank" rel="noopener noreferrer">Goro Rel, Scourge to Spiders</a></td>
+      <td>3.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8153</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.90</td>
+      <td>57.14</td>
+      <td>2.24</td>
+      <td>805</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97858" target="_blank" rel="noopener noreferrer"><img src="img/Outsmart_the_Amateur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Outsmart the Amateur.html" target="_blank" rel="noopener noreferrer">Outsmart the Amateur</a></td>
+      <td>3.66</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23777</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.05</td>
+      <td>54.29</td>
+      <td>2.24</td>
+      <td>315</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97948" target="_blank" rel="noopener noreferrer"><img src="img/Nu_and_Sumi,_Career_Criminals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nu and Sumi, Career Criminals.html" target="_blank" rel="noopener noreferrer">Nu and Sumi, Career Criminals</a></td>
+      <td>3.65</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33821</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.50</td>
+      <td>56.61</td>
+      <td>2.11</td>
+      <td>1733</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10757</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.15</td>
+      <td>54.21</td>
+      <td>2.06</td>
+      <td>642</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97874" target="_blank" rel="noopener noreferrer"><img src="img/Caldaia_Brawlers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caldaia Brawlers.html" target="_blank" rel="noopener noreferrer">Caldaia Brawlers</a></td>
+      <td>5.55</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24893</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>56.26</td>
+      <td>2.01</td>
+      <td>1854</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>11501</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>55.12</td>
+      <td>1.92</td>
+      <td>635</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34193</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.35</td>
+      <td>56.18</td>
+      <td>1.83</td>
+      <td>607</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9455</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.10</td>
+      <td>55.62</td>
+      <td>1.52</td>
+      <td>338</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97865" target="_blank" rel="noopener noreferrer"><img src="img/Rhilex_the_Accursed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rhilex the Accursed.html" target="_blank" rel="noopener noreferrer">Rhilex the Accursed</a></td>
+      <td>1.58</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>28799</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>55.75</td>
+      <td>1.45</td>
+      <td>226</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97975" target="_blank" rel="noopener noreferrer"><img src="img/Ruzic,_Booed_but_Victorious.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ruzic, Booed but Victorious.html" target="_blank" rel="noopener noreferrer">Ruzic, Booed but Victorious</a></td>
+      <td>2.00</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>9083</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.30</td>
+      <td>56.67</td>
+      <td>1.37</td>
+      <td>1514</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28055</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>59.15</td>
+      <td>60.45</td>
+      <td>1.30</td>
+      <td>220</td>
+      <td>65.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97971" target="_blank" rel="noopener noreferrer"><img src="img/Qoneus,_Horizon_Splicer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Qoneus, Horizon Splicer.html" target="_blank" rel="noopener noreferrer">Qoneus, Horizon Splicer</a></td>
+      <td>1.81</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>25451</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.40</td>
+      <td>54.65</td>
+      <td>1.25</td>
+      <td>1140</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2759</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.25</td>
+      <td>55.42</td>
+      <td>1.17</td>
+      <td>240</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12989</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.30</td>
+      <td>55.47</td>
+      <td>1.17</td>
+      <td>1673</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31031</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.05</td>
+      <td>55.15</td>
+      <td>1.10</td>
+      <td>194</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97987" target="_blank" rel="noopener noreferrer"><img src="img/Opulent_Valet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Opulent Valet.html" target="_blank" rel="noopener noreferrer">Opulent Valet</a></td>
+      <td>5.47</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8525</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.75</td>
+      <td>56.76</td>
+      <td>1.01</td>
+      <td>858</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97860" target="_blank" rel="noopener noreferrer"><img src="img/Argyr,_Tidal_Spinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Argyr, Tidal Spinner.html" target="_blank" rel="noopener noreferrer">Argyr, Tidal Spinner</a></td>
+      <td>2.69</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8339</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.05</td>
+      <td>54.05</td>
+      <td>1.00</td>
+      <td>333</td>
+      <td>52.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97859" target="_blank" rel="noopener noreferrer"><img src="img/Secret_Identity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Secret Identity.html" target="_blank" rel="noopener noreferrer">Secret Identity</a></td>
+      <td>4.77</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7781</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>50.60</td>
+      <td>51.52</td>
+      <td>0.92</td>
+      <td>297</td>
+      <td>48.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97856" target="_blank" rel="noopener noreferrer"><img src="img/Pinnacle_Research_Team.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Pinnacle Research Team.html" target="_blank" rel="noopener noreferrer">Pinnacle Research Team</a></td>
+      <td>6.11</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28985</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>54.11</td>
+      <td>0.91</td>
+      <td>7113</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td>3.62</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15593</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>54.41</td>
+      <td>0.76</td>
+      <td>136</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97902" target="_blank" rel="noopener noreferrer"><img src="img/The_Infernus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Infernus.html" target="_blank" rel="noopener noreferrer">The Infernus</a></td>
+      <td>4.25</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1829</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>56.45</td>
+      <td>0.75</td>
+      <td>248</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26381</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.10</td>
+      <td>53.50</td>
+      <td>0.40</td>
+      <td>471</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97962" target="_blank" rel="noopener noreferrer"><img src="img/Crash,_Reckless_Endrider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crash, Reckless Endrider.html" target="_blank" rel="noopener noreferrer">Crash, Reckless Endrider</a></td>
+      <td>3.26</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33263</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.45</td>
+      <td>52.83</td>
+      <td>0.38</td>
+      <td>706</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17453</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.00</td>
+      <td>52.15</td>
+      <td>0.15</td>
+      <td>209</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97912" target="_blank" rel="noopener noreferrer"><img src="img/Kephon,_Rage_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kephon, Rage Incubator.html" target="_blank" rel="noopener noreferrer">Kephon, Rage Incubator</a></td>
+      <td>5.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34565</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.35</td>
+      <td>54.36</td>
+      <td>0.01</td>
+      <td>1297</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27125</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.30</td>
+      <td>56.27</td>
+      <td>-0.03</td>
+      <td>359</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17639</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.45</td>
+      <td>53.31</td>
+      <td>-0.14</td>
+      <td>242</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97913" target="_blank" rel="noopener noreferrer"><img src="img/Restless_Razorkin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Restless Razorkin.html" target="_blank" rel="noopener noreferrer">Restless Razorkin</a></td>
+      <td>3.31</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11873</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.15</td>
+      <td>51.00</td>
+      <td>-0.15</td>
+      <td>349</td>
+      <td>49.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97880" target="_blank" rel="noopener noreferrer"><img src="img/Miasmic_Mist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Miasmic Mist.html" target="_blank" rel="noopener noreferrer">Miasmic Mist</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>7409</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.50</td>
+      <td>56.28</td>
+      <td>-0.22</td>
+      <td>414</td>
+      <td>59.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97852" target="_blank" rel="noopener noreferrer"><img src="img/The_Watcher_on_the_Road.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Watcher on the Road.html" target="_blank" rel="noopener noreferrer">The Watcher on the Road</a></td>
+      <td>1.67</td>
+      <td>U</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>3689</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.55</td>
+      <td>56.30</td>
+      <td>-0.25</td>
+      <td>119</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22847</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.70</td>
+      <td>55.43</td>
+      <td>-0.27</td>
+      <td>175</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97943" target="_blank" rel="noopener noreferrer"><img src="img/Desecrex,_Gift_of_Servitude.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Desecrex, Gift of Servitude.html" target="_blank" rel="noopener noreferrer">Desecrex, Gift of Servitude</a></td>
+      <td>2.08</td>
+      <td>BR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>26939</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.45</td>
+      <td>54.95</td>
+      <td>-0.50</td>
+      <td>293</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
+      <td>2.47</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21173</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>54.40</td>
+      <td>-0.55</td>
+      <td>125</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28241</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.10</td>
+      <td>55.42</td>
+      <td>-0.68</td>
+      <td>332</td>
+      <td>59.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97972" target="_blank" rel="noopener noreferrer"><img src="img/Cirina_Bargainspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cirina Bargainspinner.html" target="_blank" rel="noopener noreferrer">Cirina Bargainspinner</a></td>
+      <td>2.64</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10385</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>55.08</td>
+      <td>-0.72</td>
+      <td>374</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97870" target="_blank" rel="noopener noreferrer"><img src="img/The_House_Grows_Hungry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The House Grows Hungry.html" target="_blank" rel="noopener noreferrer">The House Grows Hungry</a></td>
+      <td>1.55</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>14477</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.90</td>
+      <td>52.17</td>
+      <td>-0.73</td>
+      <td>529</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97894" target="_blank" rel="noopener noreferrer"><img src="img/Deathflame_Burst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deathflame Burst.html" target="_blank" rel="noopener noreferrer">Deathflame Burst</a></td>
+      <td>3.44</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29543</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.90</td>
+      <td>52.98</td>
+      <td>-0.92</td>
+      <td>151</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28613</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.40</td>
+      <td>55.46</td>
+      <td>-0.94</td>
+      <td>339</td>
+      <td>59.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97974" target="_blank" rel="noopener noreferrer"><img src="img/Skv'x_the_Augmenter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skv'x the Augmenter.html" target="_blank" rel="noopener noreferrer">Skv'x the Augmenter</a></td>
+      <td>1.41</td>
+      <td>UB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30473</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.40</td>
+      <td>54.30</td>
+      <td>-1.10</td>
+      <td>186</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97984" target="_blank" rel="noopener noreferrer"><img src="img/Fizik,_Etherium_Mechanic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fizik, Etherium Mechanic.html" target="_blank" rel="noopener noreferrer">Fizik, Etherium Mechanic</a></td>
+      <td>1.49</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>22661</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.20</td>
+      <td>54.40</td>
+      <td>-1.80</td>
+      <td>182</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97942" target="_blank" rel="noopener noreferrer"><img src="img/Angler's_Shield.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Angler's Shield.html" target="_blank" rel="noopener noreferrer">Angler's Shield</a></td>
+      <td>1.73</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>7223</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>50.85</td>
+      <td>48.77</td>
+      <td>-2.08</td>
+      <td>244</td>
+      <td>48.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97851" target="_blank" rel="noopener noreferrer"><img src="img/Olx,_Mouth_to_Many_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Olx, Mouth to Many Eyes.html" target="_blank" rel="noopener noreferrer">Olx, Mouth to Many Eyes</a></td>
+      <td>4.95</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27869</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.40</td>
+      <td>55.19</td>
+      <td>-2.21</td>
+      <td>183</td>
+      <td>61.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97970" target="_blank" rel="noopener noreferrer"><img src="img/Makdee_and_Itla,_Skysnarers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Makdee and Itla, Skysnarers.html" target="_blank" rel="noopener noreferrer">Makdee and Itla, Skysnarers</a></td>
+      <td>1.35</td>
+      <td>WU</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>29357</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.25</td>
+      <td>51.00</td>
+      <td>-2.25</td>
+      <td>200</td>
+      <td>53.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97978" target="_blank" rel="noopener noreferrer"><img src="img/Margot,_On_the_Case.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Margot, On the Case.html" target="_blank" rel="noopener noreferrer">Margot, On the Case</a></td>
+      <td>3.37</td>
+      <td>WU</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9641</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>50.20</td>
+      <td>47.83</td>
+      <td>-2.37</td>
+      <td>230</td>
+      <td>47.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97866" target="_blank" rel="noopener noreferrer"><img src="img/Aggressive_Symbiosis.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Aggressive Symbiosis.html" target="_blank" rel="noopener noreferrer">Aggressive Symbiosis</a></td>
+      <td>4.91</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19685</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.55</td>
+      <td>51.11</td>
+      <td>-2.44</td>
+      <td>135</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26753</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.95</td>
+      <td>52.50</td>
+      <td>-2.45</td>
+      <td>541</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27497</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.70</td>
+      <td>49.09</td>
+      <td>-2.61</td>
+      <td>110</td>
+      <td>50.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97968" target="_blank" rel="noopener noreferrer"><img src="img/Uharis,_the_Stormspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Uharis, the Stormspinner.html" target="_blank" rel="noopener noreferrer">Uharis, the Stormspinner</a></td>
+      <td>3.04</td>
+      <td>UR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>4433</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.25</td>
+      <td>53.62</td>
+      <td>-2.63</td>
+      <td>414</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3317</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.05</td>
+      <td>54.41</td>
+      <td>-2.64</td>
+      <td>329</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17825</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.10</td>
+      <td>48.36</td>
+      <td>-2.74</td>
+      <td>122</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97914" target="_blank" rel="noopener noreferrer"><img src="img/Full-Throttle_Fanatic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Full-Throttle Fanatic.html" target="_blank" rel="noopener noreferrer">Full-Throttle Fanatic</a></td>
+      <td>5.97</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26195</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.05</td>
+      <td>49.17</td>
+      <td>-2.88</td>
+      <td>303</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97961" target="_blank" rel="noopener noreferrer"><img src="img/Kivni,_Orb_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kivni, Orb Weaver.html" target="_blank" rel="noopener noreferrer">Kivni, Orb Weaver</a></td>
+      <td>3.70</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21917</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>57.25</td>
+      <td>54.21</td>
+      <td>-3.04</td>
+      <td>107</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97938" target="_blank" rel="noopener noreferrer"><img src="img/Terrific_Team-Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terrific Team-Up.html" target="_blank" rel="noopener noreferrer">Terrific Team-Up</a></td>
+      <td>2.12</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16709</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.65</td>
+      <td>49.35</td>
+      <td>-3.30</td>
+      <td>387</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97908" target="_blank" rel="noopener noreferrer"><img src="img/Sadistic_String-Puller.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sadistic String-Puller.html" target="_blank" rel="noopener noreferrer">Sadistic String-Puller</a></td>
+      <td>4.77</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20987</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>51.70</td>
+      <td>-3.85</td>
+      <td>176</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4061</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>56.15</td>
+      <td>51.97</td>
+      <td>-4.18</td>
+      <td>152</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32705</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.30</td>
+      <td>49.11</td>
+      <td>-4.19</td>
+      <td>112</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3503</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>50.33</td>
+      <td>-4.27</td>
+      <td>153</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1643</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.75</td>
+      <td>50.45</td>
+      <td>-4.30</td>
+      <td>111</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97819" target="_blank" rel="noopener noreferrer"><img src="img/Costume_Closet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Costume Closet.html" target="_blank" rel="noopener noreferrer">Costume Closet</a></td>
+      <td>3.13</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16337</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>48.89</td>
+      <td>-4.31</td>
+      <td>135</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97906" target="_blank" rel="noopener noreferrer"><img src="img/Kazuo,_Ruthless_Rival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kazuo, Ruthless Rival.html" target="_blank" rel="noopener noreferrer">Kazuo, Ruthless Rival</a></td>
+      <td>4.28</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>1457</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>51.43</td>
+      <td>-4.37</td>
+      <td>175</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23591</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.85</td>
+      <td>51.43</td>
+      <td>-4.42</td>
+      <td>140</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15779</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>50.00</td>
+      <td>-4.60</td>
+      <td>220</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97903" target="_blank" rel="noopener noreferrer"><img src="img/Lavaborn_Goblins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lavaborn Goblins.html" target="_blank" rel="noopener noreferrer">Lavaborn Goblins</a></td>
+      <td>3.62</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24335</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.55</td>
+      <td>50.78</td>
+      <td>-4.77</td>
+      <td>128</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td>2.07</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>14105</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.90</td>
+      <td>46.99</td>
+      <td>-4.91</td>
+      <td>249</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97892" target="_blank" rel="noopener noreferrer"><img src="img/Galvanized_Workforce.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanized Workforce.html" target="_blank" rel="noopener noreferrer">Galvanized Workforce</a></td>
+      <td>5.27</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2945</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>55.80</td>
+      <td>50.89</td>
+      <td>-4.91</td>
+      <td>112</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97828" target="_blank" rel="noopener noreferrer"><img src="img/Generous_Betty_Wray.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Generous Betty Wray.html" target="_blank" rel="noopener noreferrer">Generous Betty Wray</a></td>
+      <td>2.43</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18755</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.75</td>
+      <td>47.18</td>
+      <td>-5.57</td>
+      <td>142</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4805</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.20</td>
+      <td>46.38</td>
+      <td>-6.82</td>
+      <td>138</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97838" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Aces.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Aces.html" target="_blank" rel="noopener noreferrer">Freestrider Aces</a></td>
+      <td>4.77</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>15965</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>51.80</td>
+      <td>44.49</td>
+      <td>-7.31</td>
+      <td>263</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97904" target="_blank" rel="noopener noreferrer"><img src="img/Romantic_Rendezvous.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Romantic Rendezvous.html" target="_blank" rel="noopener noreferrer">Romantic Rendezvous</a></td>
+      <td>5.46</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14849</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>52.00</td>
+      <td>44.64</td>
+      <td>-7.36</td>
+      <td>168</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97898" target="_blank" rel="noopener noreferrer"><img src="img/Cam_and_Farrik,_Havoc_Duo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cam and Farrik, Havoc Duo.html" target="_blank" rel="noopener noreferrer">Cam and Farrik, Havoc Duo</a></td>
+      <td>4.63</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25823</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>53.65</td>
+      <td>46.08</td>
+      <td>-7.57</td>
+      <td>102</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97959" target="_blank" rel="noopener noreferrer"><img src="img/Rhino's_Rampage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rhino's Rampage.html" target="_blank" rel="noopener noreferrer">Rhino's Rampage</a></td>
+      <td>2.57</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18941</th>
+      <td>uncommon</td>
+      <td>UB</td>
+      <td>3.62</td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.2</td>
+      <td>54.60</td>
+      <td>45.45</td>
+      <td>-9.15</td>
+      <td>154</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+  </tbody>
+</table>

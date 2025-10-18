@@ -1,0 +1,1876 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>258</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>26.70</td>
+      <td>54.79</td>
+      <td>28.09</td>
+      <td>1044</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>630</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>26.70</td>
+      <td>54.79</td>
+      <td>28.09</td>
+      <td>1044</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>631</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>26.70</td>
+      <td>54.79</td>
+      <td>28.09</td>
+      <td>1044</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>26.70</td>
+      <td>54.79</td>
+      <td>28.09</td>
+      <td>1044</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10173</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.85</td>
+      <td>64.60</td>
+      <td>10.75</td>
+      <td>113</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4035</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.25</td>
+      <td>64.75</td>
+      <td>8.50</td>
+      <td>122</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19287</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>57.30</td>
+      <td>63.93</td>
+      <td>6.63</td>
+      <td>280</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97922" target="_blank" rel="noopener noreferrer"><img src="img/A_Trail_of_Teacups.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//A Trail of Teacups.html" target="_blank" rel="noopener noreferrer">A Trail of Teacups</a></td>
+      <td>1.60</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>19845</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.35</td>
+      <td>61.90</td>
+      <td>6.55</td>
+      <td>252</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97927" target="_blank" rel="noopener noreferrer"><img src="img/Ancestral_Carvings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ancestral Carvings.html" target="_blank" rel="noopener noreferrer">Ancestral Carvings</a></td>
+      <td>4.13</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3663</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.65</td>
+      <td>63.12</td>
+      <td>6.47</td>
+      <td>160</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32493</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.90</td>
+      <td>56.66</td>
+      <td>4.76</td>
+      <td>323</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97995" target="_blank" rel="noopener noreferrer"><img src="img/Temple_Trap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temple Trap.html" target="_blank" rel="noopener noreferrer">Temple Trap</a></td>
+      <td>5.67</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20217</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>57.10</td>
+      <td>61.62</td>
+      <td>4.52</td>
+      <td>198</td>
+      <td>60.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97929" target="_blank" rel="noopener noreferrer"><img src="img/Fateweaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fateweaver.html" target="_blank" rel="noopener noreferrer">Fateweaver</a></td>
+      <td>1.71</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>16311</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.30</td>
+      <td>57.38</td>
+      <td>4.08</td>
+      <td>420</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97906" target="_blank" rel="noopener noreferrer"><img src="img/Kazuo,_Ruthless_Rival.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kazuo, Ruthless Rival.html" target="_blank" rel="noopener noreferrer">Kazuo, Ruthless Rival</a></td>
+      <td>4.28</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18543</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.25</td>
+      <td>59.23</td>
+      <td>3.98</td>
+      <td>672</td>
+      <td>57.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97918" target="_blank" rel="noopener noreferrer"><img src="img/Grow_Extra_Arms.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grow Extra Arms.html" target="_blank" rel="noopener noreferrer">Grow Extra Arms</a></td>
+      <td>4.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17241</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.90</td>
+      <td>55.87</td>
+      <td>3.97</td>
+      <td>179</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97911" target="_blank" rel="noopener noreferrer"><img src="img/Rizna,_the_Spider-Crowned.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rizna, the Spider-Crowned.html" target="_blank" rel="noopener noreferrer">Rizna, the Spider-Crowned</a></td>
+      <td>2.59</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>14637</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>49.35</td>
+      <td>53.10</td>
+      <td>3.75</td>
+      <td>113</td>
+      <td>45.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97897" target="_blank" rel="noopener noreferrer"><img src="img/Fire-Brained_Scheme.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fire-Brained Scheme.html" target="_blank" rel="noopener noreferrer">Fire-Brained Scheme</a></td>
+      <td>5.39</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29145</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.20</td>
+      <td>58.73</td>
+      <td>3.53</td>
+      <td>315</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97977" target="_blank" rel="noopener noreferrer"><img src="img/Diligent_Webkeepers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Diligent Webkeepers.html" target="_blank" rel="noopener noreferrer">Diligent Webkeepers</a></td>
+      <td>2.20</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3291</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>57.15</td>
+      <td>60.66</td>
+      <td>3.51</td>
+      <td>305</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32121</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.85</td>
+      <td>58.33</td>
+      <td>3.48</td>
+      <td>276</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97993" target="_blank" rel="noopener noreferrer"><img src="img/Goro_Rel,_Scourge_to_Spiders.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Goro Rel, Scourge to Spiders.html" target="_blank" rel="noopener noreferrer">Goro Rel, Scourge to Spiders</a></td>
+      <td>3.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15753</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.70</td>
+      <td>58.18</td>
+      <td>3.48</td>
+      <td>330</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97903" target="_blank" rel="noopener noreferrer"><img src="img/Lavaborn_Goblins.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lavaborn Goblins.html" target="_blank" rel="noopener noreferrer">Lavaborn Goblins</a></td>
+      <td>3.62</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17427</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.10</td>
+      <td>55.48</td>
+      <td>3.38</td>
+      <td>730</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97912" target="_blank" rel="noopener noreferrer"><img src="img/Kephon,_Rage_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kephon, Rage Incubator.html" target="_blank" rel="noopener noreferrer">Kephon, Rage Incubator</a></td>
+      <td>5.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23565</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.95</td>
+      <td>59.13</td>
+      <td>3.18</td>
+      <td>663</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18357</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.75</td>
+      <td>58.92</td>
+      <td>3.17</td>
+      <td>465</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97917" target="_blank" rel="noopener noreferrer"><img src="img/Orris,_Last_of_the_Web_Lords.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Orris, Last of the Web Lords.html" target="_blank" rel="noopener noreferrer">Orris, Last of the Web Lords</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25797</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.75</td>
+      <td>56.64</td>
+      <td>2.89</td>
+      <td>565</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97959" target="_blank" rel="noopener noreferrer"><img src="img/Rhino's_Rampage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rhino's Rampage.html" target="_blank" rel="noopener noreferrer">Rhino's Rampage</a></td>
+      <td>2.57</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14265</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.90</td>
+      <td>56.78</td>
+      <td>2.88</td>
+      <td>199</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97893" target="_blank" rel="noopener noreferrer"><img src="img/Bayo,_Irritable_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bayo, Irritable Instructor.html" target="_blank" rel="noopener noreferrer">Bayo, Irritable Instructor</a></td>
+      <td>2.11</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20031</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.95</td>
+      <td>58.72</td>
+      <td>2.77</td>
+      <td>1473</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23007</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.30</td>
+      <td>58.87</td>
+      <td>2.57</td>
+      <td>248</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97944" target="_blank" rel="noopener noreferrer"><img src="img/Cheering_Crowd.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cheering Crowd.html" target="_blank" rel="noopener noreferrer">Cheering Crowd</a></td>
+      <td>1.61</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>17985</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.80</td>
+      <td>56.27</td>
+      <td>2.47</td>
+      <td>622</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97915" target="_blank" rel="noopener noreferrer"><img src="img/Wisecrack.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wisecrack.html" target="_blank" rel="noopener noreferrer">Wisecrack</a></td>
+      <td>3.22</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24495</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.45</td>
+      <td>58.90</td>
+      <td>2.45</td>
+      <td>146</td>
+      <td>59.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97952" target="_blank" rel="noopener noreferrer"><img src="img/Demera,_Soul_of_a_Spider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Demera, Soul of a Spider.html" target="_blank" rel="noopener noreferrer">Demera, Soul of a Spider</a></td>
+      <td>1.33</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32679</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.40</td>
+      <td>55.70</td>
+      <td>2.30</td>
+      <td>781</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27099</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.40</td>
+      <td>58.65</td>
+      <td>2.25</td>
+      <td>1729</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27657</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.65</td>
+      <td>58.80</td>
+      <td>2.15</td>
+      <td>284</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97969" target="_blank" rel="noopener noreferrer"><img src="img/Alessos_and_Pras,_Acrobats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Alessos and Pras, Acrobats.html" target="_blank" rel="noopener noreferrer">Alessos and Pras, Acrobats</a></td>
+      <td>1.87</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>22263</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>58.10</td>
+      <td>60.14</td>
+      <td>2.04</td>
+      <td>143</td>
+      <td>62.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97940" target="_blank" rel="noopener noreferrer"><img src="img/Through_the_Omenpath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Through the Omenpath.html" target="_blank" rel="noopener noreferrer">Through the Omenpath</a></td>
+      <td>1.55</td>
+      <td>G</td>
+      <td>mythic</td>
+    </tr>
+    <tr>
+      <th>21891</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>57.35</td>
+      <td>59.32</td>
+      <td>1.97</td>
+      <td>676</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97938" target="_blank" rel="noopener noreferrer"><img src="img/Terrific_Team-Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terrific Team-Up.html" target="_blank" rel="noopener noreferrer">Terrific Team-Up</a></td>
+      <td>2.12</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14079</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.00</td>
+      <td>53.87</td>
+      <td>1.87</td>
+      <td>1008</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97892" target="_blank" rel="noopener noreferrer"><img src="img/Galvanized_Workforce.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanized Workforce.html" target="_blank" rel="noopener noreferrer">Galvanized Workforce</a></td>
+      <td>5.27</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13707</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.90</td>
+      <td>57.74</td>
+      <td>1.84</td>
+      <td>265</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4407</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.35</td>
+      <td>58.16</td>
+      <td>1.81</td>
+      <td>380</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19473</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>58.55</td>
+      <td>60.17</td>
+      <td>1.62</td>
+      <td>241</td>
+      <td>63.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97923" target="_blank" rel="noopener noreferrer"><img src="img/King_of_the_Coldblood_Curse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//King of the Coldblood Curse.html" target="_blank" rel="noopener noreferrer">King of the Coldblood Curse</a></td>
+      <td>1.42</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>26541</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>59.15</td>
+      <td>60.71</td>
+      <td>1.56</td>
+      <td>112</td>
+      <td>64.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97963" target="_blank" rel="noopener noreferrer"><img src="img/Alenni,_Brood_Recruiter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Alenni, Brood Recruiter.html" target="_blank" rel="noopener noreferrer">Alenni, Brood Recruiter</a></td>
+      <td>1.38</td>
+      <td>WG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18171</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.70</td>
+      <td>58.05</td>
+      <td>1.35</td>
+      <td>658</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97916" target="_blank" rel="noopener noreferrer"><img src="img/Selesnya_Archivist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Selesnya Archivist.html" target="_blank" rel="noopener noreferrer">Selesnya Archivist</a></td>
+      <td>2.32</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25983</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.25</td>
+      <td>56.59</td>
+      <td>1.34</td>
+      <td>410</td>
+      <td>57.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97960" target="_blank" rel="noopener noreferrer"><img src="img/Borys,_the_Spider_Rider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Borys, the Spider Rider.html" target="_blank" rel="noopener noreferrer">Borys, the Spider Rider</a></td>
+      <td>1.80</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>1431</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.90</td>
+      <td>57.23</td>
+      <td>1.33</td>
+      <td>166</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>30075</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.40</td>
+      <td>52.69</td>
+      <td>1.29</td>
+      <td>260</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25425</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.50</td>
+      <td>54.78</td>
+      <td>1.28</td>
+      <td>648</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17613</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.55</td>
+      <td>54.71</td>
+      <td>1.16</td>
+      <td>669</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97913" target="_blank" rel="noopener noreferrer"><img src="img/Restless_Razorkin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Restless Razorkin.html" target="_blank" rel="noopener noreferrer">Restless Razorkin</a></td>
+      <td>3.31</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25611</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.90</td>
+      <td>54.99</td>
+      <td>1.09</td>
+      <td>922</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97958" target="_blank" rel="noopener noreferrer"><img src="img/Xecau,_Predation's_Shadow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Xecau, Predation's Shadow.html" target="_blank" rel="noopener noreferrer">Xecau, Predation's Shadow</a></td>
+      <td>3.69</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24123</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.40</td>
+      <td>54.44</td>
+      <td>1.04</td>
+      <td>4945</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td>3.91</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>17799</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.20</td>
+      <td>52.23</td>
+      <td>1.03</td>
+      <td>381</td>
+      <td>49.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97914" target="_blank" rel="noopener noreferrer"><img src="img/Full-Throttle_Fanatic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Full-Throttle Fanatic.html" target="_blank" rel="noopener noreferrer">Full-Throttle Fanatic</a></td>
+      <td>5.97</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14451</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.00</td>
+      <td>54.02</td>
+      <td>1.02</td>
+      <td>1205</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97894" target="_blank" rel="noopener noreferrer"><img src="img/Deathflame_Burst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deathflame Burst.html" target="_blank" rel="noopener noreferrer">Deathflame Burst</a></td>
+      <td>3.44</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>31005</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.15</td>
+      <td>55.15</td>
+      <td>1.00</td>
+      <td>136</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97987" target="_blank" rel="noopener noreferrer"><img src="img/Opulent_Valet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Opulent Valet.html" target="_blank" rel="noopener noreferrer">Opulent Valet</a></td>
+      <td>5.47</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34539</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.45</td>
+      <td>55.39</td>
+      <td>0.94</td>
+      <td>993</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22077</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.25</td>
+      <td>56.98</td>
+      <td>0.73</td>
+      <td>451</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97939" target="_blank" rel="noopener noreferrer"><img src="img/Rouse_the_Swarm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rouse the Swarm.html" target="_blank" rel="noopener noreferrer">Rouse the Swarm</a></td>
+      <td>2.44</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>16125</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.95</td>
+      <td>55.65</td>
+      <td>0.70</td>
+      <td>124</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97905" target="_blank" rel="noopener noreferrer"><img src="img/Quint's_Insight.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Quint's Insight.html" target="_blank" rel="noopener noreferrer">Quint's Insight</a></td>
+      <td>2.82</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15009</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.05</td>
+      <td>52.54</td>
+      <td>0.49</td>
+      <td>177</td>
+      <td>50.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97899" target="_blank" rel="noopener noreferrer"><img src="img/Lazlo,_Enthusiastic_Accuser.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lazlo, Enthusiastic Accuser.html" target="_blank" rel="noopener noreferrer">Lazlo, Enthusiastic Accuser</a></td>
+      <td>2.37</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>20961</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.65</td>
+      <td>56.12</td>
+      <td>0.47</td>
+      <td>1372</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21147</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.05</td>
+      <td>55.48</td>
+      <td>0.43</td>
+      <td>1231</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10917</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.95</td>
+      <td>55.37</td>
+      <td>0.42</td>
+      <td>121</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16683</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.75</td>
+      <td>52.93</td>
+      <td>0.18</td>
+      <td>631</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97908" target="_blank" rel="noopener noreferrer"><img src="img/Sadistic_String-Puller.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sadistic String-Puller.html" target="_blank" rel="noopener noreferrer">Sadistic String-Puller</a></td>
+      <td>4.77</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2733</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.35</td>
+      <td>54.44</td>
+      <td>0.09</td>
+      <td>169</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33609</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.00</td>
+      <td>52.98</td>
+      <td>-0.02</td>
+      <td>1476</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98001" target="_blank" rel="noopener noreferrer"><img src="img/Savage_Mansion.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Savage Mansion.html" target="_blank" rel="noopener noreferrer">Savage Mansion</a></td>
+      <td>4.65</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18915</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.70</td>
+      <td>54.65</td>
+      <td>-0.05</td>
+      <td>1312</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21333</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.15</td>
+      <td>56.09</td>
+      <td>-0.06</td>
+      <td>583</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97935" target="_blank" rel="noopener noreferrer"><img src="img/The_Clutter_Cluster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Clutter Cluster.html" target="_blank" rel="noopener noreferrer">The Clutter Cluster</a></td>
+      <td>2.10</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27285</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>57.20</td>
+      <td>57.14</td>
+      <td>-0.06</td>
+      <td>161</td>
+      <td>61.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97967" target="_blank" rel="noopener noreferrer"><img src="img/Janai_and_Hoppy,_Roofskippers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Janai and Hoppy, Roofskippers.html" target="_blank" rel="noopener noreferrer">Janai and Hoppy, Roofskippers</a></td>
+      <td>2.29</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20403</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>58.50</td>
+      <td>58.41</td>
+      <td>-0.09</td>
+      <td>226</td>
+      <td>63.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97930" target="_blank" rel="noopener noreferrer"><img src="img/The_Scouring_Stormsoul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Scouring Stormsoul.html" target="_blank" rel="noopener noreferrer">The Scouring Stormsoul</a></td>
+      <td>1.40</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>31749</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.85</td>
+      <td>53.73</td>
+      <td>-0.12</td>
+      <td>402</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33981</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.75</td>
+      <td>54.61</td>
+      <td>-0.14</td>
+      <td>586</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24309</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.65</td>
+      <td>55.43</td>
+      <td>-0.22</td>
+      <td>175</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td>2.07</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12219</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.55</td>
+      <td>55.26</td>
+      <td>-0.29</td>
+      <td>228</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20589</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.80</td>
+      <td>54.48</td>
+      <td>-0.32</td>
+      <td>525</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97931" target="_blank" rel="noopener noreferrer"><img src="img/Scout_the_City.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scout the City.html" target="_blank" rel="noopener noreferrer">Scout the City</a></td>
+      <td>5.21</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22449</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.90</td>
+      <td>55.49</td>
+      <td>-0.41</td>
+      <td>164</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97941" target="_blank" rel="noopener noreferrer"><img src="img/Gloria,_the_Great_Armorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gloria, the Great Armorer.html" target="_blank" rel="noopener noreferrer">Gloria, the Great Armorer</a></td>
+      <td>1.83</td>
+      <td>WR</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15567</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.75</td>
+      <td>53.32</td>
+      <td>-0.43</td>
+      <td>392</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97902" target="_blank" rel="noopener noreferrer"><img src="img/The_Infernus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Infernus.html" target="_blank" rel="noopener noreferrer">The Infernus</a></td>
+      <td>4.25</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15195</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.55</td>
+      <td>51.07</td>
+      <td>-0.48</td>
+      <td>280</td>
+      <td>49.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97900" target="_blank" rel="noopener noreferrer"><img src="img/Skittering_Kitten.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Skittering Kitten.html" target="_blank" rel="noopener noreferrer">Skittering Kitten</a></td>
+      <td>5.65</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33237</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.55</td>
+      <td>51.99</td>
+      <td>-0.56</td>
+      <td>452</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>34167</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.45</td>
+      <td>53.85</td>
+      <td>-0.60</td>
+      <td>104</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19659</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.65</td>
+      <td>52.70</td>
+      <td>-0.95</td>
+      <td>1150</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33051</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.50</td>
+      <td>52.14</td>
+      <td>-1.36</td>
+      <td>140</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97998" target="_blank" rel="noopener noreferrer"><img src="img/Multiversal_Passage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Multiversal Passage.html" target="_blank" rel="noopener noreferrer">Multiversal Passage</a></td>
+      <td>2.00</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30447</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.50</td>
+      <td>54.10</td>
+      <td>-1.40</td>
+      <td>122</td>
+      <td>57.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97984" target="_blank" rel="noopener noreferrer"><img src="img/Fizik,_Etherium_Mechanic.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fizik, Etherium Mechanic.html" target="_blank" rel="noopener noreferrer">Fizik, Etherium Mechanic</a></td>
+      <td>1.49</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18729</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.85</td>
+      <td>51.43</td>
+      <td>-1.42</td>
+      <td>1017</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19101</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.05</td>
+      <td>52.58</td>
+      <td>-1.47</td>
+      <td>930</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97921" target="_blank" rel="noopener noreferrer"><img src="img/Cruel_Caracals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cruel Caracals.html" target="_blank" rel="noopener noreferrer">Cruel Caracals</a></td>
+      <td>4.68</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1245</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.70</td>
+      <td>54.21</td>
+      <td>-1.49</td>
+      <td>107</td>
+      <td>58.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97817" target="_blank" rel="noopener noreferrer"><img src="img/Zora,_Spider_Fancier.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zora, Spider Fancier.html" target="_blank" rel="noopener noreferrer">Zora, Spider Fancier</a></td>
+      <td>2.57</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20775</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>56.40</td>
+      <td>54.82</td>
+      <td>-1.58</td>
+      <td>228</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97932" target="_blank" rel="noopener noreferrer"><img src="img/Tarantusk,_Unwisely_Awoken.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tarantusk, Unwisely Awoken.html" target="_blank" rel="noopener noreferrer">Tarantusk, Unwisely Awoken</a></td>
+      <td>1.47</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>16869</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.85</td>
+      <td>51.81</td>
+      <td>-2.04</td>
+      <td>249</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97909" target="_blank" rel="noopener noreferrer"><img src="img/Kraza,_the_Swarm_as_One.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kraza, the Swarm as One.html" target="_blank" rel="noopener noreferrer">Kraza, the Swarm as One</a></td>
+      <td>1.91</td>
+      <td>R</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>12777</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.85</td>
+      <td>53.72</td>
+      <td>-2.13</td>
+      <td>121</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>29517</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.00</td>
+      <td>51.79</td>
+      <td>-2.21</td>
+      <td>112</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23751</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.15</td>
+      <td>49.67</td>
+      <td>-2.48</td>
+      <td>153</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97948" target="_blank" rel="noopener noreferrer"><img src="img/Nu_and_Sumi,_Career_Criminals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nu and Sumi, Career Criminals.html" target="_blank" rel="noopener noreferrer">Nu and Sumi, Career Criminals</a></td>
+      <td>3.65</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>32865</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.80</td>
+      <td>51.32</td>
+      <td>-2.48</td>
+      <td>304</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>15939</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.90</td>
+      <td>48.84</td>
+      <td>-3.06</td>
+      <td>475</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97904" target="_blank" rel="noopener noreferrer"><img src="img/Romantic_Rendezvous.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Romantic Rendezvous.html" target="_blank" rel="noopener noreferrer">Romantic Rendezvous</a></td>
+      <td>5.46</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4779</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.30</td>
+      <td>49.50</td>
+      <td>-3.80</td>
+      <td>101</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97838" target="_blank" rel="noopener noreferrer"><img src="img/Freestrider_Aces.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Freestrider Aces.html" target="_blank" rel="noopener noreferrer">Freestrider Aces</a></td>
+      <td>4.77</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1803</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>55.80</td>
+      <td>51.43</td>
+      <td>-4.37</td>
+      <td>210</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13335</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.25</td>
+      <td>49.57</td>
+      <td>-4.68</td>
+      <td>115</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16497</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>51.50</td>
+      <td>46.78</td>
+      <td>-4.72</td>
+      <td>481</td>
+      <td>49.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97907" target="_blank" rel="noopener noreferrer"><img src="img/Wardens_of_Silverweb_Summit.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wardens of Silverweb Summit.html" target="_blank" rel="noopener noreferrer">Wardens of Silverweb Summit</a></td>
+      <td>5.38</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26355</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>53.20</td>
+      <td>47.95</td>
+      <td>-5.25</td>
+      <td>146</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97962" target="_blank" rel="noopener noreferrer"><img src="img/Crash,_Reckless_Endrider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crash, Reckless Endrider.html" target="_blank" rel="noopener noreferrer">Crash, Reckless Endrider</a></td>
+      <td>3.26</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>3477</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.70</td>
+      <td>48.10</td>
+      <td>-6.60</td>
+      <td>158</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21705</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.75</td>
+      <td>47.18</td>
+      <td>-7.57</td>
+      <td>532</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97937" target="_blank" rel="noopener noreferrer"><img src="img/Supportive_Parents.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Supportive Parents.html" target="_blank" rel="noopener noreferrer">Supportive Parents</a></td>
+      <td>3.07</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14823</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>52.10</td>
+      <td>43.10</td>
+      <td>-9.00</td>
+      <td>116</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97898" target="_blank" rel="noopener noreferrer"><img src="img/Cam_and_Farrik,_Havoc_Duo.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cam and Farrik, Havoc Duo.html" target="_blank" rel="noopener noreferrer">Cam and Farrik, Havoc Duo</a></td>
+      <td>4.63</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21519</th>
+      <td>uncommon</td>
+      <td>RG</td>
+      <td>3.91</td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>53.4</td>
+      <td>54.55</td>
+      <td>44.97</td>
+      <td>-9.58</td>
+      <td>189</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97936" target="_blank" rel="noopener noreferrer"><img src="img/Strength_of_Will.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Strength of Will.html" target="_blank" rel="noopener noreferrer">Strength of Will</a></td>
+      <td>1.88</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+  </tbody>
+</table>

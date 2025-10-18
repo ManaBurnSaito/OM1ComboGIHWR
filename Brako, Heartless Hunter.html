@@ -1,0 +1,1990 @@
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.css" rel="stylesheet"/>
+
+    <style>
+        .my-table {
+            width: 100%;
+            table-layout: fixed; /* 各列幅を均等に */
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Arial Narrow", "Helvetica Neue Condensed Bold", sans-serif;
+            word-wrap: break-word; /* 長いテキストを折り返す */
+        }
+        .my-table img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    
+        /* 横スクロール対応 */
+        .dataTables_wrapper {
+            overflow-x: auto;
+        }
+    </style>
+
+
+    <script src="https://cdn.datatables.net/v/zf/jq-3.6.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/date-1.4.1/fh-3.3.2/sb-1.4.2/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            var table = $('.my-table').DataTable({
+                pageLength: 150,
+                select: true,
+                fixedHeader: true,
+                dom: 'iQfrtBlp',
+            });
+
+            // URLのクエリパラメータから検索文字列を取得
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            if (query) {
+                table.search(query).draw();
+                $('.dataTables_filter input').val(query);
+            }
+        });
+    </script>
+    <table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rarity</th>
+      <th>color</th>
+      <th>avg_pick</th>
+      <th>card_A</th>
+      <th>img_A</th>
+      <th>GIHWR_A</th>
+      <th>AB_AveWR</th>
+      <th>comboWR</th>
+      <th>combo+-</th>
+      <th>combo_ct</th>
+      <th>GIHWR_B</th>
+      <th>img_B</th>
+      <th>card_B</th>
+      <th>avg_pick_B</th>
+      <th>color_B</th>
+      <th>rarity_B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>260</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>28.95</td>
+      <td>56.48</td>
+      <td>27.53</td>
+      <td>216</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>28.95</td>
+      <td>56.48</td>
+      <td>27.53</td>
+      <td>216</td>
+      <td>0.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97814" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>0.00</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>632</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>28.95</td>
+      <td>56.48</td>
+      <td>27.53</td>
+      <td>216</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>633</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>28.95</td>
+      <td>56.48</td>
+      <td>27.53</td>
+      <td>216</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98039" target="_blank" rel="noopener noreferrer"><img src="img/Shock.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Shock.html" target="_blank" rel="noopener noreferrer">Shock</a></td>
+      <td>4.30</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13894</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>60.00</td>
+      <td>73.15</td>
+      <td>13.15</td>
+      <td>108</td>
+      <td>62.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97891" target="_blank" rel="noopener noreferrer"><img src="img/Villainous_Wrath.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Villainous Wrath.html" target="_blank" rel="noopener noreferrer">Villainous Wrath</a></td>
+      <td>1.54</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>17986</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.05</td>
+      <td>66.67</td>
+      <td>10.62</td>
+      <td>144</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97915" target="_blank" rel="noopener noreferrer"><img src="img/Wisecrack.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wisecrack.html" target="_blank" rel="noopener noreferrer">Wisecrack</a></td>
+      <td>3.22</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10360</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.15</td>
+      <td>68.75</td>
+      <td>10.60</td>
+      <td>144</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97870" target="_blank" rel="noopener noreferrer"><img src="img/The_House_Grows_Hungry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The House Grows Hungry.html" target="_blank" rel="noopener noreferrer">The House Grows Hungry</a></td>
+      <td>1.55</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32494</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.15</td>
+      <td>63.55</td>
+      <td>9.40</td>
+      <td>107</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97995" target="_blank" rel="noopener noreferrer"><img src="img/Temple_Trap.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Temple Trap.html" target="_blank" rel="noopener noreferrer">Temple Trap</a></td>
+      <td>5.67</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26356</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.45</td>
+      <td>64.75</td>
+      <td>9.30</td>
+      <td>122</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97962" target="_blank" rel="noopener noreferrer"><img src="img/Crash,_Reckless_Endrider.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crash, Reckless Endrider.html" target="_blank" rel="noopener noreferrer">Crash, Reckless Endrider</a></td>
+      <td>3.26</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11476</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.55</td>
+      <td>62.79</td>
+      <td>7.24</td>
+      <td>172</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
+      <td>3.53</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>11662</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.00</td>
+      <td>61.71</td>
+      <td>6.71</td>
+      <td>175</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97879" target="_blank" rel="noopener noreferrer"><img src="img/Clandestine_Work.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Clandestine Work.html" target="_blank" rel="noopener noreferrer">Clandestine Work</a></td>
+      <td>5.63</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33796</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.85</td>
+      <td>63.45</td>
+      <td>6.60</td>
+      <td>290</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
+      <td>4.30</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20032</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.20</td>
+      <td>64.61</td>
+      <td>6.41</td>
+      <td>763</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97928" target="_blank" rel="noopener noreferrer"><img src="img/Favored_Fighter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Favored Fighter.html" target="_blank" rel="noopener noreferrer">Favored Fighter</a></td>
+      <td>3.24</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13708</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.15</td>
+      <td>64.30</td>
+      <td>6.15</td>
+      <td>647</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.50</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32866</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.05</td>
+      <td>61.84</td>
+      <td>5.79</td>
+      <td>207</td>
+      <td>54.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97997" target="_blank" rel="noopener noreferrer"><img src="img/Fearsome_Ridgeline.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fearsome Ridgeline.html" target="_blank" rel="noopener noreferrer">Fearsome Ridgeline</a></td>
+      <td>4.29</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>20218</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.35</td>
+      <td>65.05</td>
+      <td>5.70</td>
+      <td>103</td>
+      <td>60.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97929" target="_blank" rel="noopener noreferrer"><img src="img/Fateweaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Fateweaver.html" target="_blank" rel="noopener noreferrer">Fateweaver</a></td>
+      <td>1.71</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>30076</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>53.65</td>
+      <td>59.32</td>
+      <td>5.67</td>
+      <td>236</td>
+      <td>49.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97982" target="_blank" rel="noopener noreferrer"><img src="img/Treat_Trolley.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Treat Trolley.html" target="_blank" rel="noopener noreferrer">Treat Trolley</a></td>
+      <td>5.45</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21892</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.60</td>
+      <td>64.85</td>
+      <td>5.25</td>
+      <td>367</td>
+      <td>61.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97938" target="_blank" rel="noopener noreferrer"><img src="img/Terrific_Team-Up.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Terrific Team-Up.html" target="_blank" rel="noopener noreferrer">Terrific Team-Up</a></td>
+      <td>2.12</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19474</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>60.80</td>
+      <td>66.00</td>
+      <td>5.20</td>
+      <td>100</td>
+      <td>63.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97923" target="_blank" rel="noopener noreferrer"><img src="img/King_of_the_Coldblood_Curse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//King of the Coldblood Curse.html" target="_blank" rel="noopener noreferrer">King of the Coldblood Curse</a></td>
+      <td>1.42</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>17428</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.35</td>
+      <td>59.32</td>
+      <td>4.97</td>
+      <td>118</td>
+      <td>50.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97912" target="_blank" rel="noopener noreferrer"><img src="img/Kephon,_Rage_Incubator.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kephon, Rage Incubator.html" target="_blank" rel="noopener noreferrer">Kephon, Rage Incubator</a></td>
+      <td>5.49</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33610</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.25</td>
+      <td>59.75</td>
+      <td>4.50</td>
+      <td>405</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98001" target="_blank" rel="noopener noreferrer"><img src="img/Savage_Mansion.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Savage Mansion.html" target="_blank" rel="noopener noreferrer">Savage Mansion</a></td>
+      <td>4.65</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>17614</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.80</td>
+      <td>60.26</td>
+      <td>4.46</td>
+      <td>151</td>
+      <td>53.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97913" target="_blank" rel="noopener noreferrer"><img src="img/Restless_Razorkin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Restless Razorkin.html" target="_blank" rel="noopener noreferrer">Restless Razorkin</a></td>
+      <td>3.31</td>
+      <td>R</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18544</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.50</td>
+      <td>61.65</td>
+      <td>4.15</td>
+      <td>266</td>
+      <td>57.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97918" target="_blank" rel="noopener noreferrer"><img src="img/Grow_Extra_Arms.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Grow Extra Arms.html" target="_blank" rel="noopener noreferrer">Grow Extra Arms</a></td>
+      <td>4.89</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9244</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.00</td>
+      <td>61.11</td>
+      <td>4.11</td>
+      <td>180</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.07</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>19660</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.90</td>
+      <td>60.00</td>
+      <td>4.10</td>
+      <td>430</td>
+      <td>53.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97924" target="_blank" rel="noopener noreferrer"><img src="img/Lurking_Lizards.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Lurking Lizards.html" target="_blank" rel="noopener noreferrer">Lurking Lizards</a></td>
+      <td>4.47</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13150</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.15</td>
+      <td>61.20</td>
+      <td>4.05</td>
+      <td>250</td>
+      <td>56.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97887" target="_blank" rel="noopener noreferrer"><img src="img/Nill,_Vessel_of_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nill, Vessel of Valgavoth.html" target="_blank" rel="noopener noreferrer">Nill, Vessel of Valgavoth</a></td>
+      <td>2.42</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19846</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.60</td>
+      <td>61.62</td>
+      <td>4.02</td>
+      <td>198</td>
+      <td>57.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97927" target="_blank" rel="noopener noreferrer"><img src="img/Ancestral_Carvings.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ancestral Carvings.html" target="_blank" rel="noopener noreferrer">Ancestral Carvings</a></td>
+      <td>4.13</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>21334</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.40</td>
+      <td>62.29</td>
+      <td>3.89</td>
+      <td>350</td>
+      <td>58.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97935" target="_blank" rel="noopener noreferrer"><img src="img/The_Clutter_Cluster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Clutter Cluster.html" target="_blank" rel="noopener noreferrer">The Clutter Cluster</a></td>
+      <td>2.10</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>14080</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.25</td>
+      <td>58.13</td>
+      <td>3.88</td>
+      <td>160</td>
+      <td>50.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97892" target="_blank" rel="noopener noreferrer"><img src="img/Galvanized_Workforce.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Galvanized Workforce.html" target="_blank" rel="noopener noreferrer">Galvanized Workforce</a></td>
+      <td>5.27</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>23566</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.20</td>
+      <td>62.01</td>
+      <td>3.81</td>
+      <td>437</td>
+      <td>58.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97947" target="_blank" rel="noopener noreferrer"><img src="img/Gallant_Citizen.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Gallant Citizen.html" target="_blank" rel="noopener noreferrer">Gallant Citizen</a></td>
+      <td>3.24</td>
+      <td>WG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3292</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.40</td>
+      <td>63.21</td>
+      <td>3.81</td>
+      <td>318</td>
+      <td>60.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
+      <td>2.66</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>29146</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.45</td>
+      <td>61.19</td>
+      <td>3.74</td>
+      <td>134</td>
+      <td>57.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97977" target="_blank" rel="noopener noreferrer"><img src="img/Diligent_Webkeepers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Diligent Webkeepers.html" target="_blank" rel="noopener noreferrer">Diligent Webkeepers</a></td>
+      <td>2.20</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>24868</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.60</td>
+      <td>60.29</td>
+      <td>3.69</td>
+      <td>272</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
+      <td>4.36</td>
+      <td>UB</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>22078</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.50</td>
+      <td>62.10</td>
+      <td>3.60</td>
+      <td>219</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97939" target="_blank" rel="noopener noreferrer"><img src="img/Rouse_the_Swarm.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rouse the Swarm.html" target="_blank" rel="noopener noreferrer">Rouse the Swarm</a></td>
+      <td>2.44</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>28030</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>61.50</td>
+      <td>65.08</td>
+      <td>3.58</td>
+      <td>126</td>
+      <td>65.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97971" target="_blank" rel="noopener noreferrer"><img src="img/Qoneus,_Horizon_Splicer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Qoneus, Horizon Splicer.html" target="_blank" rel="noopener noreferrer">Qoneus, Horizon Splicer</a></td>
+      <td>1.81</td>
+      <td>WB</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>34540</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.70</td>
+      <td>60.24</td>
+      <td>3.54</td>
+      <td>825</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
+      <td>3.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5152</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.65</td>
+      <td>61.11</td>
+      <td>3.46</td>
+      <td>108</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
+      <td>4.89</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12778</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.10</td>
+      <td>61.33</td>
+      <td>3.23</td>
+      <td>300</td>
+      <td>58.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.24</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>13336</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.50</td>
+      <td>59.71</td>
+      <td>3.21</td>
+      <td>345</td>
+      <td>55.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.58</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>27100</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.65</td>
+      <td>61.86</td>
+      <td>3.21</td>
+      <td>700</td>
+      <td>59.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97966" target="_blank" rel="noopener noreferrer"><img src="img/Leyline_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Leyline Weaver.html" target="_blank" rel="noopener noreferrer">Leyline Weaver</a></td>
+      <td>2.28</td>
+      <td>RG</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21706</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.00</td>
+      <td>59.93</td>
+      <td>2.93</td>
+      <td>287</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97937" target="_blank" rel="noopener noreferrer"><img src="img/Supportive_Parents.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Supportive Parents.html" target="_blank" rel="noopener noreferrer">Supportive Parents</a></td>
+      <td>3.07</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>25798</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.00</td>
+      <td>58.90</td>
+      <td>2.90</td>
+      <td>219</td>
+      <td>54.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97959" target="_blank" rel="noopener noreferrer"><img src="img/Rhino's_Rampage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rhino's Rampage.html" target="_blank" rel="noopener noreferrer">Rhino's Rampage</a></td>
+      <td>2.57</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>6268</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.00</td>
+      <td>60.87</td>
+      <td>2.87</td>
+      <td>115</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
+      <td>2.81</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>18172</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.95</td>
+      <td>61.76</td>
+      <td>2.81</td>
+      <td>387</td>
+      <td>60.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97916" target="_blank" rel="noopener noreferrer"><img src="img/Selesnya_Archivist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Selesnya Archivist.html" target="_blank" rel="noopener noreferrer">Selesnya Archivist</a></td>
+      <td>2.32</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19102</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.30</td>
+      <td>59.11</td>
+      <td>2.81</td>
+      <td>428</td>
+      <td>54.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97921" target="_blank" rel="noopener noreferrer"><img src="img/Cruel_Caracals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cruel Caracals.html" target="_blank" rel="noopener noreferrer">Cruel Caracals</a></td>
+      <td>4.68</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12220</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.80</td>
+      <td>60.49</td>
+      <td>2.69</td>
+      <td>615</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
+      <td>2.60</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25612</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.15</td>
+      <td>58.79</td>
+      <td>2.64</td>
+      <td>165</td>
+      <td>54.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97958" target="_blank" rel="noopener noreferrer"><img src="img/Xecau,_Predation's_Shadow.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Xecau, Predation's Shadow.html" target="_blank" rel="noopener noreferrer">Xecau, Predation's Shadow</a></td>
+      <td>3.69</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>23752</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.40</td>
+      <td>56.90</td>
+      <td>2.50</td>
+      <td>116</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97948" target="_blank" rel="noopener noreferrer"><img src="img/Nu_and_Sumi,_Career_Criminals.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Nu and Sumi, Career Criminals.html" target="_blank" rel="noopener noreferrer">Nu and Sumi, Career Criminals</a></td>
+      <td>3.65</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10174</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.10</td>
+      <td>58.59</td>
+      <td>2.49</td>
+      <td>454</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
+      <td>4.33</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25054</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.10</td>
+      <td>61.59</td>
+      <td>2.49</td>
+      <td>138</td>
+      <td>60.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97955" target="_blank" rel="noopener noreferrer"><img src="img/Tearle,_Entropic_Hunger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tearle, Entropic Hunger.html" target="_blank" rel="noopener noreferrer">Tearle, Entropic Hunger</a></td>
+      <td>2.64</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31750</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.10</td>
+      <td>58.58</td>
+      <td>2.48</td>
+      <td>408</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97991" target="_blank" rel="noopener noreferrer"><img src="img/Steelweb_Surveyor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Steelweb Surveyor.html" target="_blank" rel="noopener noreferrer">Steelweb Surveyor</a></td>
+      <td>4.82</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3664</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.90</td>
+      <td>61.15</td>
+      <td>2.25</td>
+      <td>139</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97832" target="_blank" rel="noopener noreferrer"><img src="img/Sarn_of_the_Silken_Throne.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sarn of the Silken Throne.html" target="_blank" rel="noopener noreferrer">Sarn of the Silken Throne</a></td>
+      <td>1.96</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>5896</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.60</td>
+      <td>58.82</td>
+      <td>2.22</td>
+      <td>153</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
+      <td>4.54</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10732</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.50</td>
+      <td>56.69</td>
+      <td>2.19</td>
+      <td>127</td>
+      <td>51.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97874" target="_blank" rel="noopener noreferrer"><img src="img/Caldaia_Brawlers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Caldaia Brawlers.html" target="_blank" rel="noopener noreferrer">Caldaia Brawlers</a></td>
+      <td>5.55</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18358</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.00</td>
+      <td>60.00</td>
+      <td>2.00</td>
+      <td>220</td>
+      <td>58.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97917" target="_blank" rel="noopener noreferrer"><img src="img/Orris,_Last_of_the_Web_Lords.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Orris, Last of the Web Lords.html" target="_blank" rel="noopener noreferrer">Orris, Last of the Web Lords</a></td>
+      <td>2.83</td>
+      <td>G</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27658</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.90</td>
+      <td>60.87</td>
+      <td>1.97</td>
+      <td>207</td>
+      <td>59.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97969" target="_blank" rel="noopener noreferrer"><img src="img/Alessos_and_Pras,_Acrobats.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Alessos and Pras, Acrobats.html" target="_blank" rel="noopener noreferrer">Alessos and Pras, Acrobats</a></td>
+      <td>1.87</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9430</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.45</td>
+      <td>58.41</td>
+      <td>1.96</td>
+      <td>113</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97865" target="_blank" rel="noopener noreferrer"><img src="img/Rhilex_the_Accursed.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rhilex the Accursed.html" target="_blank" rel="noopener noreferrer">Rhilex the Accursed</a></td>
+      <td>1.58</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>29890</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.55</td>
+      <td>58.41</td>
+      <td>1.86</td>
+      <td>214</td>
+      <td>55.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97981" target="_blank" rel="noopener noreferrer"><img src="img/Eerie_Gravestone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eerie Gravestone.html" target="_blank" rel="noopener noreferrer">Eerie Gravestone</a></td>
+      <td>5.54</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>14452</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.25</td>
+      <td>57.09</td>
+      <td>1.84</td>
+      <td>282</td>
+      <td>52.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97894" target="_blank" rel="noopener noreferrer"><img src="img/Deathflame_Burst.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Deathflame Burst.html" target="_blank" rel="noopener noreferrer">Deathflame Burst</a></td>
+      <td>3.44</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>16684</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.00</td>
+      <td>56.82</td>
+      <td>1.82</td>
+      <td>176</td>
+      <td>52.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97908" target="_blank" rel="noopener noreferrer"><img src="img/Sadistic_String-Puller.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sadistic String-Puller.html" target="_blank" rel="noopener noreferrer">Sadistic String-Puller</a></td>
+      <td>4.77</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>18916</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.95</td>
+      <td>58.76</td>
+      <td>1.81</td>
+      <td>628</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97920" target="_blank" rel="noopener noreferrer"><img src="img/Perilous_Lunge.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perilous Lunge.html" target="_blank" rel="noopener noreferrer">Perilous Lunge</a></td>
+      <td>3.09</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>1804</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.05</td>
+      <td>59.66</td>
+      <td>1.61</td>
+      <td>233</td>
+      <td>58.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
+      <td>3.24</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4408</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.60</td>
+      <td>60.18</td>
+      <td>1.58</td>
+      <td>339</td>
+      <td>59.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
+      <td>2.11</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20404</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>60.75</td>
+      <td>62.32</td>
+      <td>1.57</td>
+      <td>138</td>
+      <td>63.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97930" target="_blank" rel="noopener noreferrer"><img src="img/The_Scouring_Stormsoul.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//The Scouring Stormsoul.html" target="_blank" rel="noopener noreferrer">The Scouring Stormsoul</a></td>
+      <td>1.40</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>1432</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.15</td>
+      <td>59.48</td>
+      <td>1.33</td>
+      <td>232</td>
+      <td>58.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
+      <td>3.38</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20962</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.90</td>
+      <td>59.08</td>
+      <td>1.18</td>
+      <td>721</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97933" target="_blank" rel="noopener noreferrer"><img src="img/Zan,_Tunnelweb_Explorer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Zan, Tunnelweb Explorer.html" target="_blank" rel="noopener noreferrer">Zan, Tunnelweb Explorer</a></td>
+      <td>2.85</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25426</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.75</td>
+      <td>56.70</td>
+      <td>0.95</td>
+      <td>388</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
+      <td>3.46</td>
+      <td>BR</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33982</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.00</td>
+      <td>57.92</td>
+      <td>0.92</td>
+      <td>385</td>
+      <td>56.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98003" target="_blank" rel="noopener noreferrer"><img src="img/Suburban_Sanctuary.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Suburban Sanctuary.html" target="_blank" rel="noopener noreferrer">Suburban Sanctuary</a></td>
+      <td>4.17</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12592</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.25</td>
+      <td>58.03</td>
+      <td>0.78</td>
+      <td>274</td>
+      <td>56.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97884" target="_blank" rel="noopener noreferrer"><img src="img/Kroble,_Envoy_of_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kroble, Envoy of the Bog.html" target="_blank" rel="noopener noreferrer">Kroble, Envoy of the Bog</a></td>
+      <td>2.82</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>27286</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.45</td>
+      <td>60.22</td>
+      <td>0.77</td>
+      <td>186</td>
+      <td>61.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97967" target="_blank" rel="noopener noreferrer"><img src="img/Janai_and_Hoppy,_Roofskippers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Janai and Hoppy, Roofskippers.html" target="_blank" rel="noopener noreferrer">Janai and Hoppy, Roofskippers</a></td>
+      <td>2.29</td>
+      <td>WG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>34168</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.70</td>
+      <td>57.46</td>
+      <td>0.76</td>
+      <td>134</td>
+      <td>55.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
+      <td>4.39</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>33052</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.75</td>
+      <td>56.48</td>
+      <td>0.73</td>
+      <td>108</td>
+      <td>53.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97998" target="_blank" rel="noopener noreferrer"><img src="img/Multiversal_Passage.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Multiversal Passage.html" target="_blank" rel="noopener noreferrer">Multiversal Passage</a></td>
+      <td>2.00</td>
+      <td></td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>32122</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.10</td>
+      <td>57.79</td>
+      <td>0.69</td>
+      <td>244</td>
+      <td>56.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97993" target="_blank" rel="noopener noreferrer"><img src="img/Goro_Rel,_Scourge_to_Spiders.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Goro Rel, Scourge to Spiders.html" target="_blank" rel="noopener noreferrer">Goro Rel, Scourge to Spiders</a></td>
+      <td>3.37</td>
+      <td></td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>19288</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>59.55</td>
+      <td>60.16</td>
+      <td>0.61</td>
+      <td>128</td>
+      <td>61.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97922" target="_blank" rel="noopener noreferrer"><img src="img/A_Trail_of_Teacups.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//A Trail of Teacups.html" target="_blank" rel="noopener noreferrer">A Trail of Teacups</a></td>
+      <td>1.60</td>
+      <td>G</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>29518</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.25</td>
+      <td>56.48</td>
+      <td>0.23</td>
+      <td>108</td>
+      <td>54.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97979" target="_blank" rel="noopener noreferrer"><img src="img/Perfected_Pastry.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Perfected Pastry.html" target="_blank" rel="noopener noreferrer">Perfected Pastry</a></td>
+      <td>4.97</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>4036</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.50</td>
+      <td>58.73</td>
+      <td>0.23</td>
+      <td>126</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97834" target="_blank" rel="noopener noreferrer"><img src="img/Sudden_Strike.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Sudden Strike.html" target="_blank" rel="noopener noreferrer">Sudden Strike</a></td>
+      <td>2.16</td>
+      <td>W</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>33238</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.80</td>
+      <td>54.95</td>
+      <td>0.15</td>
+      <td>384</td>
+      <td>51.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97999" target="_blank" rel="noopener noreferrer"><img src="img/Ominous_Asylum.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Ominous Asylum.html" target="_blank" rel="noopener noreferrer">Ominous Asylum</a></td>
+      <td>4.63</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>21148</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.30</td>
+      <td>57.44</td>
+      <td>0.14</td>
+      <td>578</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97934" target="_blank" rel="noopener noreferrer"><img src="img/Chizak,_Apex_Arachnosaur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Chizak, Apex Arachnosaur.html" target="_blank" rel="noopener noreferrer">Chizak, Apex Arachnosaur</a></td>
+      <td>3.50</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24310</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.90</td>
+      <td>57.92</td>
+      <td>0.02</td>
+      <td>3068</td>
+      <td>57.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td>2.07</td>
+      <td>BG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>18730</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.10</td>
+      <td>54.97</td>
+      <td>-0.13</td>
+      <td>513</td>
+      <td>52.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97919" target="_blank" rel="noopener noreferrer"><img src="img/Eccentric_Arachnologist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Eccentric Arachnologist.html" target="_blank" rel="noopener noreferrer">Eccentric Arachnologist</a></td>
+      <td>3.86</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>24124</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.65</td>
+      <td>55.43</td>
+      <td>-0.22</td>
+      <td>175</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97950" target="_blank" rel="noopener noreferrer"><img src="img/Dreadfang,_Loathed_by_Fans.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Dreadfang, Loathed by Fans.html" target="_blank" rel="noopener noreferrer">Dreadfang, Loathed by Fans</a></td>
+      <td>3.91</td>
+      <td>RG</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12964</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.65</td>
+      <td>56.29</td>
+      <td>-0.36</td>
+      <td>302</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
+      <td>4.07</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>32680</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.65</td>
+      <td>55.25</td>
+      <td>-0.40</td>
+      <td>467</td>
+      <td>53.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97996" target="_blank" rel="noopener noreferrer"><img src="img/Vinewoven_Chariot.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vinewoven Chariot.html" target="_blank" rel="noopener noreferrer">Vinewoven Chariot</a></td>
+      <td>4.92</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>5338</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.80</td>
+      <td>56.39</td>
+      <td>-0.41</td>
+      <td>133</td>
+      <td>55.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
+      <td>4.63</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>20590</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.05</td>
+      <td>56.57</td>
+      <td>-0.48</td>
+      <td>327</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97931" target="_blank" rel="noopener noreferrer"><img src="img/Scout_the_City.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scout the City.html" target="_blank" rel="noopener noreferrer">Scout the City</a></td>
+      <td>5.21</td>
+      <td>G</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>10918</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.20</td>
+      <td>56.71</td>
+      <td>-0.49</td>
+      <td>462</td>
+      <td>56.5</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
+      <td>4.19</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26728</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.30</td>
+      <td>56.76</td>
+      <td>-0.54</td>
+      <td>111</td>
+      <td>56.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
+      <td>3.58</td>
+      <td>WU</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>2734</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.60</td>
+      <td>55.88</td>
+      <td>-0.72</td>
+      <td>170</td>
+      <td>55.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.67</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>13522</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.85</td>
+      <td>56.11</td>
+      <td>-0.74</td>
+      <td>303</td>
+      <td>55.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
+      <td>4.94</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>9988</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>60.25</td>
+      <td>59.50</td>
+      <td>-0.75</td>
+      <td>121</td>
+      <td>62.6</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97868" target="_blank" rel="noopener noreferrer"><img src="img/Wrench,_Speedway_Saboteur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Wrench, Speedway Saboteur.html" target="_blank" rel="noopener noreferrer">Wrench, Speedway Saboteur</a></td>
+      <td>1.46</td>
+      <td>B</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>23008</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.55</td>
+      <td>57.80</td>
+      <td>-0.75</td>
+      <td>109</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97944" target="_blank" rel="noopener noreferrer"><img src="img/Cheering_Crowd.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Cheering Crowd.html" target="_blank" rel="noopener noreferrer">Cheering Crowd</a></td>
+      <td>1.61</td>
+      <td>RG</td>
+      <td>rare</td>
+    </tr>
+    <tr>
+      <th>15940</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.15</td>
+      <td>52.70</td>
+      <td>-1.45</td>
+      <td>148</td>
+      <td>50.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97904" target="_blank" rel="noopener noreferrer"><img src="img/Romantic_Rendezvous.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Romantic Rendezvous.html" target="_blank" rel="noopener noreferrer">Romantic Rendezvous</a></td>
+      <td>5.46</td>
+      <td>R</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>3478</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.95</td>
+      <td>54.46</td>
+      <td>-2.49</td>
+      <td>213</td>
+      <td>56.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97831" target="_blank" rel="noopener noreferrer"><img src="img/Darval,_Whose_Web_Protects.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Darval, Whose Web Protects.html" target="_blank" rel="noopener noreferrer">Darval, Whose Web Protects</a></td>
+      <td>3.75</td>
+      <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12034</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.45</td>
+      <td>52.80</td>
+      <td>-2.65</td>
+      <td>161</td>
+      <td>53.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97881" target="_blank" rel="noopener noreferrer"><img src="img/Scorvus_Ames,_Crimelord.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Scorvus Ames, Crimelord.html" target="_blank" rel="noopener noreferrer">Scorvus Ames, Crimelord</a></td>
+      <td>3.35</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>9058</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.65</td>
+      <td>54.68</td>
+      <td>-2.97</td>
+      <td>139</td>
+      <td>57.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.32</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>26170</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>54.40</td>
+      <td>50.00</td>
+      <td>-4.40</td>
+      <td>102</td>
+      <td>50.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97961" target="_blank" rel="noopener noreferrer"><img src="img/Kivni,_Orb_Weaver.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Kivni, Orb Weaver.html" target="_blank" rel="noopener noreferrer">Kivni, Orb Weaver</a></td>
+      <td>3.70</td>
+      <td>BR</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>31006</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.40</td>
+      <td>51.75</td>
+      <td>-4.65</td>
+      <td>114</td>
+      <td>54.9</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97987" target="_blank" rel="noopener noreferrer"><img src="img/Opulent_Valet.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Opulent Valet.html" target="_blank" rel="noopener noreferrer">Opulent Valet</a></td>
+      <td>5.47</td>
+      <td></td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>28960</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>55.55</td>
+      <td>50.78</td>
+      <td>-4.77</td>
+      <td>128</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
+      <td>3.62</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>8686</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>56.10</td>
+      <td>51.24</td>
+      <td>-4.86</td>
+      <td>121</td>
+      <td>54.3</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
+      <td>4.41</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>7570</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>58.55</td>
+      <td>53.15</td>
+      <td>-5.40</td>
+      <td>111</td>
+      <td>59.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
+      <td>4.64</td>
+      <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>25240</th>
+      <td>rare</td>
+      <td>BG</td>
+      <td>2.07</td>
+      <td><a href=".//Brako, Heartless Hunter.html" target="_blank" rel="noopener noreferrer">Brako, Heartless Hunter</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97951" target="_blank" rel="noopener noreferrer"><img src="img/Brako,_Heartless_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>57.9</td>
+      <td>57.85</td>
+      <td>51.67</td>
+      <td>-6.18</td>
+      <td>120</td>
+      <td>57.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97956" target="_blank" rel="noopener noreferrer"><img src="img/Carlo,_Suave_Schemer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Carlo, Suave Schemer.html" target="_blank" rel="noopener noreferrer">Carlo, Suave Schemer</a></td>
+      <td>3.05</td>
+      <td>UB</td>
+      <td>uncommon</td>
+    </tr>
+  </tbody>
+</table>

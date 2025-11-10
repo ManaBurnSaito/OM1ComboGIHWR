@@ -20,6 +20,30 @@
         .dataTables_wrapper {
             overflow-x: auto;
         }
+
+        /* ▼ 追加：ヘッダーリンクバー */
+        .header-links {
+            background-color: #f3f3f3;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .header-links a {
+            margin: 0 10px;
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .header-links a:hover {
+            text-decoration: underline;
+        }
+        /* ▼ 現在ページのハイライト */
+        .header-links a.active {
+            color: #d40000;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
     </style>
 
 
@@ -44,7 +68,7 @@
             }
         });
     </script>
-    <table border="1" class="dataframe my-table">
+    <div class="header-links"><a href="index.html">Index</a><a href="uncommon.html">Uncommon</a><a href="WU.html">WU</a><a href="WB.html">WB</a><a href="WR.html">WR</a><a href="WG.html">WG</a><a href="UB.html">UB</a><a href="UR.html">UR</a><a href="UG.html">UG</a><a href="BR.html">BR</a><a href="BG.html">BG</a><a href="RG.html">RG</a></div><table border="1" class="dataframe my-table">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -71,18 +95,18 @@
       <th>27848</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>52.55</td>
+      <td>52.70</td>
       <td>59.30</td>
-      <td>6.75</td>
+      <td>6.60</td>
       <td>172</td>
-      <td>53.1</td>
+      <td>53.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97976" target="_blank" rel="noopener noreferrer"><img src="img/Rishei,_Getaway_Accomplice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Rishei, Getaway Accomplice.html" target="_blank" rel="noopener noreferrer">Rishei, Getaway Accomplice</a></td>
-      <td>3.62</td>
+      <td>3.66</td>
       <td>UB</td>
       <td>uncommon</td>
     </tr>
@@ -90,18 +114,18 @@
       <th>27116</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.50</td>
+      <td>55.60</td>
       <td>62.04</td>
-      <td>6.54</td>
+      <td>6.44</td>
       <td>137</td>
-      <td>59.0</td>
+      <td>59.2</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97972" target="_blank" rel="noopener noreferrer"><img src="img/Cirina_Bargainspinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Cirina Bargainspinner.html" target="_blank" rel="noopener noreferrer">Cirina Bargainspinner</a></td>
-      <td>2.64</td>
+      <td>2.62</td>
       <td>WU</td>
       <td>uncommon</td>
     </tr>
@@ -109,7 +133,7 @@
       <th>10097</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -120,7 +144,7 @@
       <td>56.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97875" target="_blank" rel="noopener noreferrer"><img src="img/Merciless_Enforcers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Merciless Enforcers.html" target="_blank" rel="noopener noreferrer">Merciless Enforcers</a></td>
-      <td>4.19</td>
+      <td>4.16</td>
       <td>B</td>
       <td>common</td>
     </tr>
@@ -128,37 +152,18 @@
       <th>11195</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>52.50</td>
+      <td>52.65</td>
       <td>58.27</td>
-      <td>5.77</td>
+      <td>5.62</td>
       <td>139</td>
-      <td>53.0</td>
+      <td>53.3</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97881" target="_blank" rel="noopener noreferrer"><img src="img/Scorvus_Ames,_Crimelord.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Scorvus Ames, Crimelord.html" target="_blank" rel="noopener noreferrer">Scorvus Ames, Crimelord</a></td>
-      <td>3.35</td>
-      <td>B</td>
-      <td>uncommon</td>
-    </tr>
-    <tr>
-      <th>11927</th>
-      <td>rare</td>
-      <td>U</td>
       <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>55.15</td>
-      <td>60.83</td>
-      <td>5.68</td>
-      <td>217</td>
-      <td>58.3</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
-      <td>2.23</td>
       <td>B</td>
       <td>uncommon</td>
     </tr>
@@ -166,7 +171,7 @@
       <th>30959</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -182,18 +187,37 @@
       <td>uncommon</td>
     </tr>
     <tr>
-      <th>12293</th>
+      <th>11927</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.20</td>
+      <td>55.55</td>
+      <td>60.83</td>
+      <td>5.28</td>
+      <td>217</td>
+      <td>59.1</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97885" target="_blank" rel="noopener noreferrer"><img src="img/Remorseless_Coup.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Remorseless Coup.html" target="_blank" rel="noopener noreferrer">Remorseless Coup</a></td>
+      <td>2.23</td>
+      <td>B</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>12293</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>54.45</td>
       <td>59.57</td>
-      <td>5.37</td>
+      <td>5.12</td>
       <td>188</td>
-      <td>56.4</td>
+      <td>56.9</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97887" target="_blank" rel="noopener noreferrer"><img src="img/Nill,_Vessel_of_Valgavoth.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Nill, Vessel of Valgavoth.html" target="_blank" rel="noopener noreferrer">Nill, Vessel of Valgavoth</a></td>
       <td>2.42</td>
@@ -204,7 +228,7 @@
       <th>24188</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -215,7 +239,7 @@
       <td>57.8</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97956" target="_blank" rel="noopener noreferrer"><img src="img/Carlo,_Suave_Schemer.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Carlo, Suave Schemer.html" target="_blank" rel="noopener noreferrer">Carlo, Suave Schemer</a></td>
-      <td>3.05</td>
+      <td>3.04</td>
       <td>UB</td>
       <td>uncommon</td>
     </tr>
@@ -223,18 +247,18 @@
       <th>28763</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.60</td>
+      <td>53.70</td>
       <td>58.33</td>
-      <td>4.73</td>
+      <td>4.63</td>
       <td>132</td>
-      <td>55.2</td>
+      <td>55.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97981" target="_blank" rel="noopener noreferrer"><img src="img/Eerie_Gravestone.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Eerie Gravestone.html" target="_blank" rel="noopener noreferrer">Eerie Gravestone</a></td>
-      <td>5.54</td>
+      <td>5.56</td>
       <td></td>
       <td>common</td>
     </tr>
@@ -242,18 +266,18 @@
       <th>11378</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.85</td>
+      <td>55.00</td>
       <td>59.22</td>
-      <td>4.37</td>
+      <td>4.22</td>
       <td>358</td>
-      <td>57.7</td>
+      <td>58.0</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97882" target="_blank" rel="noopener noreferrer"><img src="img/Scorpion's_Sting.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Scorpion's Sting.html" target="_blank" rel="noopener noreferrer">Scorpion's Sting</a></td>
-      <td>2.60</td>
+      <td>2.59</td>
       <td>B</td>
       <td>common</td>
     </tr>
@@ -261,7 +285,7 @@
       <th>10829</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -272,7 +296,7 @@
       <td>52.1</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97879" target="_blank" rel="noopener noreferrer"><img src="img/Clandestine_Work.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Clandestine Work.html" target="_blank" rel="noopener noreferrer">Clandestine Work</a></td>
-      <td>5.63</td>
+      <td>5.66</td>
       <td>B</td>
       <td>common</td>
     </tr>
@@ -280,15 +304,15 @@
       <th>24005</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>56.15</td>
+      <td>56.35</td>
       <td>59.75</td>
-      <td>3.60</td>
+      <td>3.40</td>
       <td>241</td>
-      <td>60.3</td>
+      <td>60.7</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97955" target="_blank" rel="noopener noreferrer"><img src="img/Tearle,_Entropic_Hunger.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Tearle, Entropic Hunger.html" target="_blank" rel="noopener noreferrer">Tearle, Entropic Hunger</a></td>
       <td>2.64</td>
@@ -299,15 +323,15 @@
       <th>4607</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.80</td>
+      <td>53.90</td>
       <td>57.27</td>
-      <td>3.47</td>
+      <td>3.37</td>
       <td>447</td>
-      <td>55.6</td>
+      <td>55.8</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97841" target="_blank" rel="noopener noreferrer"><img src="img/Arala,_Hedron_Scaler.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Arala, Hedron Scaler.html" target="_blank" rel="noopener noreferrer">Arala, Hedron Scaler</a></td>
       <td>4.63</td>
@@ -315,59 +339,59 @@
       <td>common</td>
     </tr>
     <tr>
-      <th>12476</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>53.55</td>
-      <td>56.79</td>
-      <td>3.24</td>
-      <td>287</td>
-      <td>55.1</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
-      <td>4.58</td>
-      <td>B</td>
-      <td>common</td>
-    </tr>
-    <tr>
       <th>5339</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.35</td>
+      <td>53.45</td>
       <td>56.56</td>
-      <td>3.21</td>
+      <td>3.11</td>
       <td>343</td>
-      <td>54.7</td>
+      <td>54.9</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97845" target="_blank" rel="noopener noreferrer"><img src="img/Obscura_Alleylurkers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Obscura Alleylurkers.html" target="_blank" rel="noopener noreferrer">Obscura Alleylurkers</a></td>
-      <td>5.28</td>
+      <td>5.30</td>
       <td>U</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>12476</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>53.70</td>
+      <td>56.79</td>
+      <td>3.09</td>
+      <td>287</td>
+      <td>55.4</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97888" target="_blank" rel="noopener noreferrer"><img src="img/Tethex,_Gift_of_Malice.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Tethex, Gift of Malice.html" target="_blank" rel="noopener noreferrer">Tethex, Gift of Malice</a></td>
+      <td>4.55</td>
+      <td>B</td>
       <td>common</td>
     </tr>
     <tr>
       <th>28214</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>52.65</td>
+      <td>53.00</td>
       <td>55.86</td>
-      <td>3.21</td>
+      <td>2.86</td>
       <td>111</td>
-      <td>53.3</td>
+      <td>54.0</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97978" target="_blank" rel="noopener noreferrer"><img src="img/Margot,_On_the_Case.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Margot, On the Case.html" target="_blank" rel="noopener noreferrer">Margot, On the Case</a></td>
-      <td>3.38</td>
+      <td>3.39</td>
       <td>WU</td>
       <td>uncommon</td>
     </tr>
@@ -375,15 +399,15 @@
       <th>12110</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.65</td>
+      <td>53.80</td>
       <td>56.61</td>
-      <td>2.96</td>
+      <td>2.81</td>
       <td>295</td>
-      <td>55.3</td>
+      <td>55.6</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97886" target="_blank" rel="noopener noreferrer"><img src="img/Wekhdu,_Midnight_Hunter.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Wekhdu, Midnight Hunter.html" target="_blank" rel="noopener noreferrer">Wekhdu, Midnight Hunter</a></td>
       <td>4.08</td>
@@ -394,15 +418,15 @@
       <th>32606</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.80</td>
+      <td>54.00</td>
       <td>56.16</td>
-      <td>2.36</td>
+      <td>2.16</td>
       <td>406</td>
-      <td>55.6</td>
+      <td>56.0</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98002" target="_blank" rel="noopener noreferrer"><img src="img/Sinister_Hideout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Sinister Hideout.html" target="_blank" rel="noopener noreferrer">Sinister Hideout</a></td>
       <td>4.30</td>
@@ -413,18 +437,18 @@
       <th>7718</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.10</td>
+      <td>55.20</td>
       <td>57.32</td>
-      <td>2.22</td>
+      <td>2.12</td>
       <td>321</td>
-      <td>58.2</td>
+      <td>58.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97860" target="_blank" rel="noopener noreferrer"><img src="img/Argyr,_Tidal_Spinner.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Argyr, Tidal Spinner.html" target="_blank" rel="noopener noreferrer">Argyr, Tidal Spinner</a></td>
-      <td>2.69</td>
+      <td>2.71</td>
       <td>U</td>
       <td>uncommon</td>
     </tr>
@@ -432,37 +456,56 @@
       <th>4790</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>52.60</td>
+      <td>54.71</td>
+      <td>2.11</td>
+      <td>223</td>
+      <td>53.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97842" target="_blank" rel="noopener noreferrer"><img src="img/Vazin,_Two-Faced_Trickster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Vazin, Two-Faced Trickster.html" target="_blank" rel="noopener noreferrer">Vazin, Two-Faced Trickster</a></td>
+      <td>3.73</td>
+      <td>U</td>
+      <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>10646</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
       <td>52.55</td>
-      <td>54.71</td>
-      <td>2.16</td>
-      <td>223</td>
+      <td>54.05</td>
+      <td>1.50</td>
+      <td>111</td>
       <td>53.1</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97842" target="_blank" rel="noopener noreferrer"><img src="img/Vazin,_Two-Faced_Trickster.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Vazin, Two-Faced Trickster.html" target="_blank" rel="noopener noreferrer">Vazin, Two-Faced Trickster</a></td>
-      <td>3.74</td>
-      <td>U</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
+      <td>3.54</td>
+      <td>B</td>
       <td>uncommon</td>
     </tr>
     <tr>
       <th>5522</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.00</td>
+      <td>55.15</td>
       <td>56.62</td>
-      <td>1.62</td>
+      <td>1.47</td>
       <td>355</td>
-      <td>58.0</td>
+      <td>58.3</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97846" target="_blank" rel="noopener noreferrer"><img src="img/Vexed_Bots.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Vexed Bots.html" target="_blank" rel="noopener noreferrer">Vexed Bots</a></td>
-      <td>2.81</td>
+      <td>2.79</td>
       <td>U</td>
       <td>uncommon</td>
     </tr>
@@ -470,75 +513,37 @@
       <th>5156</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.60</td>
+      <td>53.80</td>
       <td>55.20</td>
-      <td>1.60</td>
+      <td>1.40</td>
       <td>442</td>
-      <td>55.2</td>
+      <td>55.6</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97844" target="_blank" rel="noopener noreferrer"><img src="img/Ozor,_Chronicler_of_Collapse.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Ozor, Chronicler of Collapse.html" target="_blank" rel="noopener noreferrer">Ozor, Chronicler of Collapse</a></td>
-      <td>4.53</td>
+      <td>4.51</td>
       <td>U</td>
       <td>common</td>
-    </tr>
-    <tr>
-      <th>10646</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>52.65</td>
-      <td>54.05</td>
-      <td>1.40</td>
-      <td>111</td>
-      <td>53.3</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97878" target="_blank" rel="noopener noreferrer"><img src="img/Prison_Break.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Prison Break.html" target="_blank" rel="noopener noreferrer">Prison Break</a></td>
-      <td>3.53</td>
-      <td>B</td>
-      <td>uncommon</td>
     </tr>
     <tr>
       <th>7901</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.10</td>
+      <td>53.15</td>
       <td>54.46</td>
-      <td>1.36</td>
+      <td>1.31</td>
       <td>415</td>
-      <td>54.2</td>
+      <td>54.3</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97861" target="_blank" rel="noopener noreferrer"><img src="img/Hide_in_Mundanity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Hide in Mundanity.html" target="_blank" rel="noopener noreferrer">Hide in Mundanity</a></td>
-      <td>4.40</td>
-      <td>U</td>
-      <td>common</td>
-    </tr>
-    <tr>
-      <th>8267</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>54.70</td>
-      <td>56.05</td>
-      <td>1.35</td>
-      <td>496</td>
-      <td>57.4</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
-      <td>4.31</td>
+      <td>4.35</td>
       <td>U</td>
       <td>common</td>
     </tr>
@@ -546,7 +551,7 @@
       <th>5888</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -557,26 +562,45 @@
       <td>52.0</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td>U</td>
       <td>rare</td>
+    </tr>
+    <tr>
+      <th>8267</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>54.85</td>
+      <td>56.05</td>
+      <td>1.20</td>
+      <td>496</td>
+      <td>57.7</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97863" target="_blank" rel="noopener noreferrer"><img src="img/Unstable_Experiment.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Unstable Experiment.html" target="_blank" rel="noopener noreferrer">Unstable Experiment</a></td>
+      <td>4.33</td>
+      <td>U</td>
+      <td>common</td>
     </tr>
     <tr>
       <th>6803</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.50</td>
+      <td>55.70</td>
       <td>56.73</td>
-      <td>1.23</td>
+      <td>1.03</td>
       <td>379</td>
-      <td>59.0</td>
+      <td>59.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97853" target="_blank" rel="noopener noreferrer"><img src="img/Phantasmal_Vision.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Phantasmal Vision.html" target="_blank" rel="noopener noreferrer">Phantasmal Vision</a></td>
-      <td>4.64</td>
+      <td>4.61</td>
       <td>U</td>
       <td>common</td>
     </tr>
@@ -584,18 +608,18 @@
       <th>7535</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>52.45</td>
+      <td>52.55</td>
       <td>53.57</td>
-      <td>1.12</td>
+      <td>1.02</td>
       <td>112</td>
-      <td>52.9</td>
+      <td>53.1</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97859" target="_blank" rel="noopener noreferrer"><img src="img/Secret_Identity.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Secret Identity.html" target="_blank" rel="noopener noreferrer">Secret Identity</a></td>
-      <td>4.78</td>
+      <td>4.81</td>
       <td>U</td>
       <td>uncommon</td>
     </tr>
@@ -603,18 +627,18 @@
       <th>32972</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.75</td>
+      <td>53.85</td>
       <td>54.50</td>
-      <td>0.75</td>
+      <td>0.65</td>
       <td>222</td>
-      <td>55.5</td>
+      <td>55.7</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98004" target="_blank" rel="noopener noreferrer"><img src="img/University_Campus.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//University Campus.html" target="_blank" rel="noopener noreferrer">University Campus</a></td>
-      <td>4.39</td>
+      <td>4.38</td>
       <td></td>
       <td>common</td>
     </tr>
@@ -622,18 +646,18 @@
       <th>23822</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.60</td>
+      <td>53.70</td>
       <td>54.28</td>
-      <td>0.68</td>
+      <td>0.58</td>
       <td>409</td>
-      <td>55.2</td>
+      <td>55.4</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97954" target="_blank" rel="noopener noreferrer"><img src="img/Mob_Lookout.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Mob Lookout.html" target="_blank" rel="noopener noreferrer">Mob Lookout</a></td>
-      <td>4.36</td>
+      <td>4.34</td>
       <td>UB</td>
       <td>common</td>
     </tr>
@@ -641,18 +665,18 @@
       <th>4424</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.65</td>
+      <td>54.80</td>
       <td>55.31</td>
-      <td>0.66</td>
+      <td>0.51</td>
       <td>452</td>
-      <td>57.3</td>
+      <td>57.6</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97840" target="_blank" rel="noopener noreferrer"><img src="img/Drix_Interception.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Drix Interception.html" target="_blank" rel="noopener noreferrer">Drix Interception</a></td>
-      <td>4.89</td>
+      <td>4.88</td>
       <td>U</td>
       <td>common</td>
     </tr>
@@ -660,37 +684,18 @@
       <th>12659</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.85</td>
+      <td>54.05</td>
       <td>54.47</td>
-      <td>0.62</td>
+      <td>0.42</td>
       <td>235</td>
-      <td>55.7</td>
+      <td>56.1</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97889" target="_blank" rel="noopener noreferrer"><img src="img/Bane-Marked_Leonin.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Bane-Marked Leonin.html" target="_blank" rel="noopener noreferrer">Bane-Marked Leonin</a></td>
-      <td>4.93</td>
-      <td>B</td>
-      <td>common</td>
-    </tr>
-    <tr>
-      <th>12842</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>55.20</td>
-      <td>55.46</td>
-      <td>0.26</td>
-      <td>366</td>
-      <td>58.4</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
-      <td>2.50</td>
+      <td>4.90</td>
       <td>B</td>
       <td>common</td>
     </tr>
@@ -698,15 +703,15 @@
       <th>33338</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.70</td>
+      <td>53.75</td>
       <td>53.87</td>
-      <td>0.17</td>
+      <td>0.12</td>
       <td>271</td>
-      <td>55.4</td>
+      <td>55.5</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=98006" target="_blank" rel="noopener noreferrer"><img src="img/Vibrant_Cityscape.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Vibrant Cityscape.html" target="_blank" rel="noopener noreferrer">Vibrant Cityscape</a></td>
       <td>3.54</td>
@@ -714,10 +719,29 @@
       <td>common</td>
     </tr>
     <tr>
+      <th>12842</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>55.40</td>
+      <td>55.46</td>
+      <td>0.06</td>
+      <td>366</td>
+      <td>58.8</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97890" target="_blank" rel="noopener noreferrer"><img src="img/Damning_Caress.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Damning Caress.html" target="_blank" rel="noopener noreferrer">Damning Caress</a></td>
+      <td>2.47</td>
+      <td>B</td>
+      <td>common</td>
+    </tr>
+    <tr>
       <th>9914</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -728,7 +752,7 @@
       <td>50.9</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97874" target="_blank" rel="noopener noreferrer"><img src="img/Caldaia_Brawlers.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Caldaia Brawlers.html" target="_blank" rel="noopener noreferrer">Caldaia Brawlers</a></td>
-      <td>5.56</td>
+      <td>5.60</td>
       <td>B</td>
       <td>common</td>
     </tr>
@@ -736,45 +760,26 @@
       <th>24371</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>52.80</td>
+      <td>52.90</td>
       <td>52.41</td>
-      <td>-0.39</td>
+      <td>-0.49</td>
       <td>166</td>
-      <td>53.6</td>
+      <td>53.8</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97957" target="_blank" rel="noopener noreferrer"><img src="img/Knife_Trick.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Knife Trick.html" target="_blank" rel="noopener noreferrer">Knife Trick</a></td>
-      <td>3.47</td>
+      <td>3.52</td>
       <td>BR</td>
-      <td>common</td>
-    </tr>
-    <tr>
-      <th>8450</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>54.00</td>
-      <td>53.38</td>
-      <td>-0.62</td>
-      <td>547</td>
-      <td>56.0</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
-      <td>4.07</td>
-      <td>U</td>
       <td>common</td>
     </tr>
     <tr>
       <th>2594</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -785,26 +790,45 @@
       <td>60.9</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97830" target="_blank" rel="noopener noreferrer"><img src="img/Spectacular_Tactics.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Spectacular Tactics.html" target="_blank" rel="noopener noreferrer">Spectacular Tactics</a></td>
-      <td>2.65</td>
+      <td>2.58</td>
       <td>W</td>
+      <td>common</td>
+    </tr>
+    <tr>
+      <th>8450</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>54.10</td>
+      <td>53.38</td>
+      <td>-0.72</td>
+      <td>547</td>
+      <td>56.2</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97864" target="_blank" rel="noopener noreferrer"><img src="img/Snatch_Back.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Snatch Back.html" target="_blank" rel="noopener noreferrer">Snatch Back</a></td>
+      <td>4.12</td>
+      <td>U</td>
       <td>common</td>
     </tr>
     <tr>
       <th>6437</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>50.20</td>
+      <td>50.45</td>
       <td>49.51</td>
-      <td>-0.69</td>
+      <td>-0.94</td>
       <td>103</td>
-      <td>48.4</td>
+      <td>48.9</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97851" target="_blank" rel="noopener noreferrer"><img src="img/Olx,_Mouth_to_Many_Eyes.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Olx, Mouth to Many Eyes.html" target="_blank" rel="noopener noreferrer">Olx, Mouth to Many Eyes</a></td>
-      <td>4.96</td>
+      <td>5.02</td>
       <td>U</td>
       <td>uncommon</td>
     </tr>
@@ -812,15 +836,15 @@
       <th>9365</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>53.10</td>
+      <td>53.30</td>
       <td>52.27</td>
-      <td>-0.83</td>
+      <td>-1.03</td>
       <td>308</td>
-      <td>54.2</td>
+      <td>54.6</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97869" target="_blank" rel="noopener noreferrer"><img src="img/Common_Crook.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Common Crook.html" target="_blank" rel="noopener noreferrer">Common Crook</a></td>
       <td>4.33</td>
@@ -831,18 +855,18 @@
       <th>25652</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.35</td>
+      <td>54.40</td>
       <td>52.97</td>
-      <td>-1.38</td>
+      <td>-1.43</td>
       <td>236</td>
-      <td>56.7</td>
+      <td>56.8</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97964" target="_blank" rel="noopener noreferrer"><img src="img/Wonderweave_Aerialist.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Wonderweave Aerialist.html" target="_blank" rel="noopener noreferrer">Wonderweave Aerialist</a></td>
-      <td>3.57</td>
+      <td>3.54</td>
       <td>WU</td>
       <td>common</td>
     </tr>
@@ -850,15 +874,15 @@
       <th>7169</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.05</td>
+      <td>55.25</td>
       <td>53.55</td>
-      <td>-1.50</td>
+      <td>-1.70</td>
       <td>211</td>
-      <td>58.1</td>
+      <td>58.5</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97857" target="_blank" rel="noopener noreferrer"><img src="img/Robotics_Mastery.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Robotics Mastery.html" target="_blank" rel="noopener noreferrer">Robotics Mastery</a></td>
       <td>3.31</td>
@@ -869,18 +893,18 @@
       <th>7352</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.25</td>
+      <td>54.40</td>
       <td>52.47</td>
-      <td>-1.78</td>
+      <td>-1.93</td>
       <td>263</td>
-      <td>56.5</td>
+      <td>56.8</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97858" target="_blank" rel="noopener noreferrer"><img src="img/Outsmart_the_Amateur.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Outsmart the Amateur.html" target="_blank" rel="noopener noreferrer">Outsmart the Amateur</a></td>
-      <td>3.67</td>
+      <td>3.70</td>
       <td>U</td>
       <td>uncommon</td>
     </tr>
@@ -888,26 +912,45 @@
       <th>11744</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>54.25</td>
+      <td>54.35</td>
       <td>51.52</td>
-      <td>-2.73</td>
+      <td>-2.83</td>
       <td>132</td>
-      <td>56.5</td>
+      <td>56.7</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97884" target="_blank" rel="noopener noreferrer"><img src="img/Kroble,_Envoy_of_the_Bog.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Kroble, Envoy of the Bog.html" target="_blank" rel="noopener noreferrer">Kroble, Envoy of the Bog</a></td>
-      <td>2.81</td>
+      <td>2.79</td>
       <td>B</td>
       <td>uncommon</td>
+    </tr>
+    <tr>
+      <th>2045</th>
+      <td>rare</td>
+      <td>U</td>
+      <td>3.43</td>
+      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td>52.0</td>
+      <td>53.50</td>
+      <td>49.57</td>
+      <td>-3.93</td>
+      <td>117</td>
+      <td>55.0</td>
+      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
+      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
+      <td>3.66</td>
+      <td>W</td>
+      <td>common</td>
     </tr>
     <tr>
       <th>3692</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -918,26 +961,7 @@
       <td>59.3</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97836" target="_blank" rel="noopener noreferrer"><img src="img/Mothwing_Shroud.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Mothwing Shroud.html" target="_blank" rel="noopener noreferrer">Mothwing Shroud</a></td>
-      <td>2.11</td>
-      <td>W</td>
-      <td>common</td>
-    </tr>
-    <tr>
-      <th>2045</th>
-      <td>rare</td>
-      <td>U</td>
-      <td>3.37</td>
-      <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td>52.0</td>
-      <td>53.60</td>
-      <td>49.57</td>
-      <td>-4.03</td>
-      <td>117</td>
-      <td>55.2</td>
-      <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97827" target="_blank" rel="noopener noreferrer"><img src="img/Crime-Scene_Instructor.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
-      <td><a href=".//Crime-Scene Instructor.html" target="_blank" rel="noopener noreferrer">Crime-Scene Instructor</a></td>
-      <td>3.66</td>
+      <td>2.09</td>
       <td>W</td>
       <td>common</td>
     </tr>
@@ -945,7 +969,7 @@
       <th>1130</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -956,7 +980,7 @@
       <td>58.0</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97820" target="_blank" rel="noopener noreferrer"><img src="img/Principled_Referee.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Principled Referee.html" target="_blank" rel="noopener noreferrer">Principled Referee</a></td>
-      <td>3.23</td>
+      <td>3.20</td>
       <td>W</td>
       <td>common</td>
     </tr>
@@ -964,7 +988,7 @@
       <th>25835</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
@@ -975,7 +999,7 @@
       <td>57.6</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97965" target="_blank" rel="noopener noreferrer"><img src="img/Kumonosu,_the_Watchful.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//Kumonosu, the Watchful.html" target="_blank" rel="noopener noreferrer">Kumonosu, the Watchful</a></td>
-      <td>2.46</td>
+      <td>2.44</td>
       <td>WU</td>
       <td>uncommon</td>
     </tr>
@@ -983,18 +1007,18 @@
       <th>764</th>
       <td>rare</td>
       <td>U</td>
-      <td>3.37</td>
+      <td>3.43</td>
       <td><a href=".//Belion, the Parched.html" target="_blank" rel="noopener noreferrer">Belion, the Parched</a></td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97848" target="_blank" rel="noopener noreferrer"><img src="img/Belion,_the_Parched.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td>52.0</td>
-      <td>55.20</td>
+      <td>55.25</td>
       <td>50.46</td>
-      <td>-4.74</td>
+      <td>-4.79</td>
       <td>109</td>
-      <td>58.4</td>
+      <td>58.5</td>
       <td><a href="https://www.17lands.com/card_data/details?expansion=OM1&format=PickTwoDraft&start=2025-07-30&card_id=97818" target="_blank" rel="noopener noreferrer"><img src="img/City_Pigeon.png" alt="Image" width="50" height="auto" loading="lazy"></a></td>
       <td><a href=".//City Pigeon.html" target="_blank" rel="noopener noreferrer">City Pigeon</a></td>
-      <td>3.38</td>
+      <td>3.39</td>
       <td>W</td>
       <td>common</td>
     </tr>
